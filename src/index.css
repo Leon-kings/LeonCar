@@ -1,0 +1,323 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ece3e3;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #2048da;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #12adf0;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+/* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap"); */
+
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ /* background-image: linear-gradient(23deg,#4b4a4a,#000); */
+}
+
+:root {
+ --header-height: 3.5rem;
+ --first-color: hsl(28, 88%, 62%);
+ --title-color: hsl(0, 0%, 95%);
+ --text-color: hsl(0, 0%, 75%);
+ --body-color: hsl(0, 0%, 6%);
+ --body-font: "Montserrat", sans-serif;
+ --second-font: "Dancing Script", cursive;
+ --h2-font-size: 1.25rem;
+ --small-font-size: 0.813rem;
+ --font-semi-bold: 600;
+ --z-tooltip: 10;
+ --z-fixed: 100;
+}
+
+body {
+ background-color: var(--body-color);
+ color: var(--text-color);
+ font-family: var(--body-font);
+}
+
+ul {
+ list-style: none;
+}
+
+a {
+ text-decoration: none;
+}
+#invisible{
+  visibility: hidden
+}
+.eye-cart{
+  display: flex;
+}
+.eye{
+  color: green;
+  background-image: linear-gradient(23deg,#ff3,#ff8);
+  padding: 0.3em;
+}
+.cart{
+  color: #2048da;
+  background-image: linear-gradient(24deg,#f5f,#f45);
+  padding: 0.3em;
+}
+.carsposition{
+  float: left;
+  padding: 0.6em;
+  width: 25%;
+}
+.logs{
+  padding: 2em;
+  align-items: center;
+}
+.login{
+  background-color: #ece3e3;
+  padding: 0.2em;
+  width: 50%;
+}
+
+.NewFeaturedimg{
+  width: 90%;
+  height: 180px;
+}
+.Newimg{
+  width: 100%;
+  height: 90%;
+  max-height: 250px;
+}
+.color{
+  color: #c0c7e2;
+}
+#button{
+  width: 100%;
+  padding: 0%;
+}
+.white{
+  background-color: #ffffff;
+}
+.section{
+  padding: 0.3em;
+  border-radius: 0.4em;
+}
+/* responsiviness */
+
+/* Extra small devices (phones, 480px and down) */
+  @media only screen and (min-width: 480px) {
+
+  }
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  .App-header{
+    width: 100%;
+  }
+  /* home */
+  .backImage .front .card{
+    width: 100%;
+   
+  }
+  .backImage{
+    background-size: cover;
+    padding: 0;
+  }
+  .Box{
+    width: 100%;
+  }
+  form .form{
+    width: 100%;
+    margin: 0;
+  }
+  .container .block{
+    width: 100%;
+  }
+.left{
+  width: 100%;
+  padding: 0.3em;
+}
+.sleft{
+  width: 100%;
+  padding: 0.3em;
+}
+.xleft{
+  width: 100%;
+  padding: 0.3em;
+}
+.column{
+  width: 100%;
+}
+*{
+width: 100%;
+padding: 0.2em;
+
+}
+.img{
+  width: 100%;
+}
+
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .App-header{
+    width: 100%;
+  }
+*{
+ 
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* */
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+  .App-header{
+    width: 100%;
+  }
+
+.button, .btn{
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+width: 203px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+*{
+ 
+  width: 100%;
+}
+.button , .btn{
+  width: 10em;
+}
+input{
+  width: 20em;
+}
+
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .left{
+    padding: 0.5em;
+   
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .left{
+    padding: 0.5em;
+  }
+}
+
+
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
