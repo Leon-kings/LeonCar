@@ -1,102 +1,108 @@
-// import {
-//   Card,
-//   Input,
-//   Checkbox,
-//   Button,
-//   Typography,
-// } from "@material-tailwind/react";
+import {
+  Card,
+  Input,
+  Button,
+  Typography,
+} from "@material-tailwind/react";
  
-// export function SimpleRegistrationForm() {
-//   return (
-//      <Card color="transparent" shadow={false}>
-//       <Typography variant="h4" color="blue-gray">
-//         Sign Up
-//       </Typography>
-//       <Typography color="gray" className="mt-1 font-normal">
-//         Nice to meet you! Enter your details to register.
-//       </Typography>
-//       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-//         <div className="mb-1 flex flex-col gap-6">
-//           <Typography variant="h6" color="blue-gray" className="-mb-3">
-//             Your Name
-//           </Typography>
-//           <Input
-//             size="lg"
-//             placeholder="name@mail.com"
-//             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-//             labelProps={{
-//               className: "before:content-none after:content-none",
-//             }}
-//           />
-//           <Typography variant="h6" color="blue-gray" className="-mb-3">
-//             Your Email
-//           </Typography>
-//           <Input
-//             size="lg"
-//             placeholder="name@mail.com"
-//             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-//             labelProps={{
-//               className: "before:content-none after:content-none",
-//             }}
-//           />
-//           <Typography variant="h6" color="blue-gray" className="-mb-3">
-//             Password
-//           </Typography>
-//           <Input
-//             type="password"
-//             size="lg"
-//             placeholder="********"
-//             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-//             labelProps={{
-//               className: "before:content-none after:content-none",
-//             }}
-//           />
-//         </div>
-//         <Checkbox
-//           label={
-//             <Typography
-//               variant="small"
-//               color="gray"
-//               className="flex items-center font-normal"
-//             >
-//               I agree the
-//               <a
-//                 href="#"
-//                 className="font-medium transition-colors hover:text-gray-900"
-//               >
-//                 &nbsp;Terms and Conditions
-//               </a>
-//             </Typography>
-//           }
-//           containerProps={{ className: "-ml-2.5" }}
-//         />
-//         <Button className="mt-6" fullWidth>
-//           sign up
-//         </Button>
-//         <Typography color="gray" className="mt-4 text-center font-normal">
-//           Already have an account?{" "}
-//           <a href="#" className="font-medium text-gray-900">
-//             Sign In
-//           </a>
-//         </Typography>
-//       </form>
-//     </Card>
-//   );
-// }
-// // import React from 'react'
-
-// // function FormCarRFental() {
-// //   return (
-// //     <div>FormCarRFental</div>
-// //   )
-// // }
-
-// // export default FormCarRFental
-// import React from 'react'
-
 function FormCarRFental() {
   return (
-    <div>FormCarRFental</div>
+    <>
+    <div className="left"></div>
+    <div className="left">
+    <Card color="transparent" shadow={false}>
+    <h2 className="text">Fill It Up</h2>
+    <Typography color="gray" className="mt-1 font-normal">
+      Nice to meet you! Enter your details to register.
+    </Typography>
+    <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+      <div className="mb-1 flex flex-col gap-6">
+        <Typography variant="h6" color="blue" className="-mb-3">
+         Input Your Name
+        </Typography>
+        <Input
+          size="lg"
+          placeholder="name"
+          className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+          labelProps={{
+            className: "before:content-none after:content-none",
+          }}
+        />
+        <Typography variant="h6" color="blue" className="-mb-3">
+          Your Email
+        </Typography>
+        <Input
+          size="lg"
+          placeholder="name@mail.com"
+          className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+          labelProps={{
+            className: "before:content-none after:content-none",
+          }}
+        />
+        <Typography variant="h6" color="blue" className="-mb-3">
+          Category
+        </Typography>
+        <Input
+          type="text"
+          size="lg"
+          placeholder="Sedni , Van , Bus , Truck"
+          className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+          labelProps={{
+            className: "before:content-none after:content-none",
+          }}
+        />
+                          <div className="my-4 flex items-center gap-4">
+                    <div>
+                      <Typography
+                        variant="small"
+                        color="blue"
+                        className="mb-2 font-medium"
+                      >
+                       Starts
+                      </Typography>
+                      <Input
+                        maxLength={5}
+                        // value={formatExpires(cardExpires)}
+                        // onChange={(event) => setCardExpires(event.target.value)}
+                        containerProps={{ className: "min-w-[72px]" }}
+                        type="date"
+                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 px-3 py-3"
+                        labelProps={{
+                          className: "before:content-none after:content-none",
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <Typography
+                        variant="small"
+                        color="blue"
+                        className="mb-2 font-medium"
+                      >
+                        Ends
+                      </Typography>
+                      <Input
+                        maxLength={4}
+                        containerProps={{ className: "min-w-[72px]" }}
+                        type="date"
+                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 px-3 py-3"
+                        labelProps={{
+                          className: "before:content-none after:content-none",
+                        }}
+                      />
+                    </div>
+                  </div>
+
+
+      </div>
+
+      <Button className="button mt-6" >
+        Book
+      </Button>
+    </form>
+  </Card>
+  </div>
+  <div className="left"></div>
+  </>
   )
 }
 

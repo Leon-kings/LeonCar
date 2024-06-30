@@ -12,8 +12,8 @@ function Brands() {
         deserunt incidunt quisquam placeat accusamus eligendi nemo corrupti! Illo, voluptatem nisi! </h2>
       </div>
 {brands.map((enventor) =>(
-  <div className="sleft flex" key={1}>
-<div className="hea">
+  <div className="left flex" key={1}>
+<div className="head">
   <img src={enventor.URL} alt={enventor.inx} className="NewFeaturedimg" />
 </div>
 <div className="head">

@@ -11,6 +11,8 @@ import CarSell from "../../servicePages/rent/CarSell"
 import { SearchByDetails } from "../../components/search/SearchByDetails"
 import Tools from "../../servicePages/tools/Tools"
 import App from "../../components/Cart/App"
+import FormCarRFental from "../../servicePages/rental-form/FormCarRFental"
+import Testimony from "../testmony/Testimony"
 
 
 function Home() {
@@ -253,7 +255,7 @@ function Home() {
                 <Company />
               </div>
             </div>
-            <div className="head">
+            <div className="head text-cyan-300">
               That`s Our Brands Of Cars We Offers
             </div>
           </div>
@@ -272,8 +274,11 @@ function Home() {
 {/* Featured New cars starts*/}
         <div className="container">
           <div className="backCar">
-            <h4 className="text-center">Checkout the Featured Cars</h4>
-            <h2 className="text-center">Featured Cars</h2>
+            <h4 className="text-center text-blue-500">Checkout the Featured Cars</h4>
+            <h3 className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea ut dicta quos, 
+              sunt inventore possimus itaque fugit ipsa recusandae atque veniam et eaque omnis autem ipsam exercitationem 
+              corporis sit.</h3>
+            <h2 className="text-center">New Featured Cars</h2>
           </div>
           <App />
 
@@ -287,7 +292,9 @@ function Home() {
   
         <div className="container">
           <div className="backCar">
-            <h4 className="text-center">Checkout the Featured ToolKits</h4>
+            <h4 className="text-center text-blue-400">Checkout the Featured ToolKits</h4>
+            <h3 className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ab unde ipsa veritatis eveniet, 
+              inventore et voluptas corrupti ipsum dolores autem reiciendis vitae pariatur iure non qui, nostrum quod omnis?</h3>
             <h2 className="text-center">Featured ToolKits</h2>
           </div>
        <div className="container">
@@ -307,7 +314,10 @@ function Home() {
 {/* Featured New Rent Cars start*/}
         <div className="container">
           <div className="backCar">
-            <h4 className="text-center">Checkout the Featured Car For Rent</h4>
+            <h4 className="text-center text-blue-400">Checkout the Featured Car For Rent</h4>
+            <h3 className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nihil nobis,
+               placeat ut, assumenda sapiente unde exercitationem consequuntur rerum doloribus animi hic aut 
+               nulla magni? Labore, repudiandae. Dolorem, quidem! Adipisci!</h3>
             <h2 className="text-center">Featured Rental Car</h2>
           </div>
           <div className="container">
@@ -317,10 +327,48 @@ function Home() {
           </div>
 </div>
 {/* Featured New Rent Cars ends*/}
+           {/*  */}
+           {/*  */}  
+           <br />
+        <hr />
+{/* Featured  start*/}
+<div className="container">
+          <div className="backCar">
+            <h4 className="text-center text-blue-400">Request Renting Car</h4>
+            <h3 className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat harum aperiam sunt, vitae provident ab, 
+              blanditiis illo ut placeat sint autem! Hic nobis voluptatum a quasi velit? Ipsam, totam a?</h3>
+            <h2 className="text-center">Make Request For Rental Car</h2>
+          </div>
+          <div className="container">
+            <div className="head">
+              <FormCarRFental />
+            </div>
+          </div>
+</div>
+{/* Featured New Rent Cars ends*/}
         <br />
         <br />
+      
         <br />
         <hr />
+       
+        <br />
+      
+{/* Featured  start*/}
+<div className="container">
+          <div className="backCar">
+            <h4 className="text-center text-blue-400">Testimony</h4>
+            <h3 className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat harum aperiam sunt, vitae provident ab, 
+              blanditiis illo ut placeat sint autem! Hic nobis voluptatum a quasi velit? Ipsam, totam a?</h3>
+            <h2 className="text-center">Our Story</h2>
+          </div>
+          <div className="container">
+            <div className="head">
+            <Testimony/>
+            </div>
+          </div>
+</div>
+{/* Featured New Rent Cars ends*/}
         <div className="last">
           <h2 className="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rerum neque
             rem deserunt veniam illum maxime enim, id fugiat aspernatur molestias exercitationem suscipit possimus dolor

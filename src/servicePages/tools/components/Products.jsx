@@ -52,7 +52,7 @@ async function getProducts(){
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10'>
         {
           ToolProducts.map(product => (
-            <div key={product.id} className='bg-white shadow-md rounded-lg px-5 py-10'>
+            <div key={product.id} className='bg-white shadow-md rounded-lg px-2 py-8'>
               <img src={product.thumbnail} alt={product.title} className='rounded-md h-48 w-58' />
               <div className='mt-4'>
                 <h1 className='text-lg uppercase font-bold'>{product.title}</h1>

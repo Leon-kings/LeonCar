@@ -52,4 +52,18 @@ export const brands = [
  inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
  URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
 }
+,
+{
+ id: 8,
+ head: ' Zhengzhou Yutong Bus',
+ inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
+ URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
+}
+,
+{
+ id: 9,
+ head: ' Zhengzhou Yutong Bus',
+ inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
+ URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
+}
 ]

@@ -6,8 +6,8 @@ function Company() {
     <>
     <div className="container">
 {brands.map((Company , index) =>(
-    <div className="sleft" key={index}>
-<img src={Company.URL} alt="" />
+    <div className="left" key={index}>
+<img src={Company.URL} alt=""  className="w-80 h-36"/>
 <div className="head">
     <h2 className="text-center">{Company.head} </h2>
     <h3 className="text-center">{Company.inx} </h3>

@@ -182,6 +182,12 @@ a {
   padding: 0.3em;
   border-radius: 0.4em;
 }
+.cycle{
+  border-radius: 50%;
+  padding: 12px;
+  /* margin-left: 1.7em; */
+  height: 220px;
+}
 /* responsiviness */
 
 /* Extra small devices (phones, 480px and down) */
