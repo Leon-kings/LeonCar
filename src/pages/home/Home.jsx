@@ -13,6 +13,7 @@ import Tools from "../../servicePages/tools/Tools"
 import App from "../../components/Cart/App"
 import FormCarRFental from "../../servicePages/rental-form/FormCarRFental"
 import Testimony from "../testmony/Testimony"
+import Qtn from "../../components/Question/Qtn"
 
 
 function Home() {
@@ -334,6 +335,27 @@ function Home() {
 {/* Featured  start*/}
 <div className="container">
           <div className="backCar">
+            <h4 className="text-center text-blue-400">Cars Under 15000 $</h4>
+           
+            <h2 className="text-center">Shop Your Cars </h2>
+          </div>
+          <div className="container">
+            <div className="head">
+            <Qtn/>
+            </div>
+          </div>
+</div>
+{/* Featured New Rent Cars ends */}
+
+{/*  */}
+{/*  */}
+
+<br />
+<hr />
+
+{/* Featured  start*/}
+<div className="container">
+          <div className="backCar">
             <h4 className="text-center text-blue-400">Request Renting Car</h4>
             <h3 className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat harum aperiam sunt, vitae provident ab, 
               blanditiis illo ut placeat sint autem! Hic nobis voluptatum a quasi velit? Ipsam, totam a?</h3>
@@ -369,6 +391,11 @@ function Home() {
           </div>
 </div>
 {/* Featured New Rent Cars ends*/}
+
+<br />
+<hr />
+
+
         <div className="last">
           <h2 className="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rerum neque
             rem deserunt veniam illum maxime enim, id fugiat aspernatur molestias exercitationem suscipit possimus dolor

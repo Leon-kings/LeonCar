@@ -24,11 +24,12 @@ import FormCarRFental from "./servicePages/rental-form/FormCarRFental";
 import {RentCartProvider} from "./components/Rental/context/cart"
 // import Payment from "./components/payment/Payment"
 import Trial from "./servicePages/trial"
+import {CheepProvider } from "./components/Question/context/cart";
 const App = () => {
  return (
 
 
-
+<CheepProvider>
      <CartProvider>
           <ToolsCartContext>
                <RentCartProvider>
@@ -62,7 +63,7 @@ const App = () => {
    </RentCartProvider>
    </ToolsCartContext>
    </CartProvider> 
-   
+   </CheepProvider>
 
 
  );
