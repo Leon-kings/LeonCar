@@ -396,7 +396,7 @@ function Home() {
 
         <br />
         <hr />
-  
+
 
         <div className="last">
           <h2 className="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rerum neque

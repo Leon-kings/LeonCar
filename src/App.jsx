@@ -19,6 +19,8 @@ import { CheepProvider } from "./components/Question/context/cart";
 import { CartProvider } from "./components/Cart/context/cart";
 import { ToolsCartContext } from "./servicePages/tools/context/cart";
 import Dashboard from "./admin/Dashboard"
+          import Users from "./admin/pages/Users"
+          import SellCars from "./admin/pages/SellCars"
 const App = () => {
      return (
 
@@ -44,6 +46,9 @@ const App = () => {
                                         <Route element={<ToolKit />} path='/Services/ToolKit'></Route>
                                         <Route element={<FieldTeam />} path="/Request/ImediateTeamSupport"> </Route>
                                         <Route element={<FormCarRFental />} path='/FormCarRFental'></Route>
+                                        {/* admin pages */}
+                                        <Route element={<Users />} path='/admin/users-browsered'></Route>
+                                        <Route element={<SellCars />} path='/admin/selled-cars'></Route>
 
                                    </Routes>
                                    <Footer />
