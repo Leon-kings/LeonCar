@@ -11,11 +11,11 @@ import CarSell from "../../servicePages/rent/CarSell"
 import { SearchByDetails } from "../../components/search/SearchByDetails"
 import Tools from "../../servicePages/tools/Tools"
 import App from "../../components/Cart/App"
-// import FormCarRFental from "../../servicePages/rental-form/FormCarRFental"
 import Testimony from "../testmony/Testimony"
 import Qtn from "../../components/Question/Qtn"
 import OurTeam from "../team/OurTeam"
 import QuestionPage from "../../components/Qtn/QuestionPage"
+
 function Home() {
 
 
@@ -396,6 +396,7 @@ function Home() {
 
         <br />
         <hr />
+  
 
         <div className="last">
           <h2 className="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rerum neque
