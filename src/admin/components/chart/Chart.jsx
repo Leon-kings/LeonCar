@@ -1,226 +1,134 @@
-// import React from "react";
-import { Line } from "react-chartjs-2";
-
-
-export default function MetricsChart() {
-  const data1 = {
-    labels: ["1", "2", "3", "4", "5", "6", "7"],
-    datasets: [
-      {
-        fill: "origin",
-        backgroundColor: "rgba(253, 244, 255, 1)",
-        borderColor: "rgba(232, 121, 249, 1)",
-        tension: 0.3,
-        borderWidth: 2,
-        data: [1, 3, 2, 5, 4, 5, 7],
-      },
-    ],
-  };
-
-  const data2 = {
-    labels: ["1", "2", "3", "4", "5", "6", "7"],
-    datasets: [
-      {
-        fill: "origin",
-        backgroundColor: "rgba(236, 254, 255, 1)",
-        borderColor: "rgba(34, 211, 238, 1)",
-        tension: 0.3,
-        borderWidth: 2,
-        data: [1, 5, 4, 5, 3, 6, 3],
-      },
-    ],
-  };
-
-  const data3 = {
-    labels: ["1", "2", "3", "4", "5", "6", "7"],
-    datasets: [
-      {
-        fill: "origin",
-        backgroundColor: "rgba(255, 251, 235, 1)",
-        borderColor: "rgba(251, 191, 36, 1)",
-        tension: 0.3,
-        borderWidth: 2,
-        data: [2, 5, 4, 6, 3, 5, 7],
-      },
-    ],
-  };
-
-  const data4 = {
-    labels: ["1", "2", "3", "4", "5", "6", "7"],
-    datasets: [
-      {
-        fill: "origin",
-        backgroundColor: "rgba(236, 253, 245, 1)",
-        borderColor: "rgba(52, 211, 153, 1)",
-        tension: 0.3,
-        borderWidth: 2,
-        data: [1, 5, 2, 5, 3, 7, 6],
-      },
-    ],
-  };
-
-  const chartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: false,
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
+import Chart from "react-apexcharts";
+import { Square3Stack3DIcon } from "@heroicons/react/24/outline";
+ 
+// If you're using Next.js please use the dynamic import for react-apexcharts and remove the import from the top for the react-apexcharts
+// import dynamic from "next/dynamic";
+// const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+ 
+const chartConfig = {
+  type: "line",
+  height: 240,
+  series: [
+    {
+      name: "Sales",
+      data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+    },
+  ],
+  options: {
+    chart: {
+      toolbar: {
+        show: false,
       },
     },
-    tooltips: {
+    title: {
+      show: "",
+    },
+    dataLabels: {
       enabled: false,
     },
-    elements: {
-      point: {
-        radius: 0,
+    colors: ["#020617"],
+    stroke: {
+      lineCap: "round",
+      curve: "smooth",
+    },
+    markers: {
+      size: 0,
+    },
+    xaxis: {
+      axisTicks: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+      labels: {
+        style: {
+          colors: "#616161",
+          fontSize: "12px",
+          fontFamily: "inherit",
+          fontWeight: 400,
+        },
+      },
+      categories: [
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
+    },
+    yaxis: {
+      labels: {
+        style: {
+          colors: "#616161",
+          fontSize: "12px",
+          fontFamily: "inherit",
+          fontWeight: 400,
+        },
       },
     },
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-        title: {
-          display: false,
-        },
-        display: false,
-        ticks: {
-          display: false,
+    grid: {
+      show: true,
+      borderColor: "#dddddd",
+      strokeDashArray: 5,
+      xaxis: {
+        lines: {
+          show: true,
         },
       },
-
-      y: {
-        grid: {
-          display: false,
-        },
-
-        display: false,
-        title: {
-          display: false,
-        },
-        ticks: {
-          display: false,
-        },
-        suggestedMin: 0,
-        suggestedMax: 10,
+      padding: {
+        top: 5,
+        right: 20,
       },
     },
-  };
-
+    fill: {
+      opacity: 0.8,
+    },
+    tooltip: {
+      theme: "dark",
+    },
+  },
+};
+ 
+export default function Example() {
   return (
-    <>
-      <div className="flex items-center min-h-screen bg-gray-200 dark:bg-gray-900">
-        <div className="container max-w-6xl px-5 mx-auto my-28">
-          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="relative p-5 pb-16 overflow-hidden bg-white rounded-md shadow-sm">
-              <div className="text-base text-gray-400 ">Total Sales</div>
-              <div className="relative z-10 flex items-center pt-1">
-                <div className="text-2xl font-bold text-gray-900 ">
-                  $9850.90
-                </div>
-                <span className="flex items-center px-2 py-0.5 mx-2 text-sm text-green-600 bg-green-100 rounded-full">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M18 15L12 9L6 15"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span>1.8%</span>
-                </span>
-              </div>
-
-              <div className="absolute bottom-0 inset-x-0  z-0">
-                <Line height={80} data={data1} options={chartOptions} />
-              </div>
-            </div>
-            <div className="relative p-5 pb-16 overflow-hidden bg-white rounded-md shadow-sm">
-              <div className="text-base text-gray-400 ">Net Revenue</div>
-              <div className="relative z-10 flex items-center pt-1">
-                <div className="text-2xl font-bold text-gray-900 ">
-                  $7520.50
-                </div>
-                <span className="flex items-center px-2 py-0.5 mx-2 text-sm text-red-600 bg-red-100 rounded-full">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span>2.5%</span>
-                </span>
-              </div>
-
-              <div className="absolute bottom-0 inset-x-0 z-0">
-                <Line height={80} data={data2} options={chartOptions} />
-              </div>
-            </div>
-            <div className="relative p-5 pb-16 overflow-hidden bg-white rounded-md shadow-sm">
-              <div className="text-base text-gray-400 ">Customers</div>
-              <div className="relative z-10 flex items-center pt-1">
-                <div className="text-2xl font-bold text-gray-900 ">1375</div>
-                <span className="flex items-center px-2 py-0.5 mx-2 text-sm text-green-600 bg-green-100 rounded-full">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M18 15L12 9L6 15"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span>5.2%</span>
-                </span>
-              </div>
-              <div className="absolute bottom-0 inset-x-0 z-0">
-                <Line height={80} data={data3} options={chartOptions} />
-              </div>
-            </div>
-            <div className="relative p-5 pb-16 overflow-hidden bg-white rounded-md shadow-sm">
-              <div className="text-base text-gray-400 ">MRR</div>
-              <div className="relative z-10 flex items-center pt-1">
-                <div className="text-2xl font-bold text-gray-900 ">$250.00</div>
-                <span className="flex items-center px-2 py-0.5 mx-2 text-sm text-green-600 bg-green-100 rounded-full">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M18 15L12 9L6 15"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span>2.2%</span>
-                </span>
-              </div>
-              <div className="absolute bottom-0 inset-x-0 z-0">
-                <Line height={80} data={data4} options={chartOptions} />
-              </div>
-            </div>
-          </div>
+    <Card>
+      <CardHeader
+        floated={false}
+        shadow={false}
+        color="transparent"
+        className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
+      >
+        <div className="w-max rounded-lg bg-gray-900 p-5 text-white">
+          <Square3Stack3DIcon className="h-6 w-6" />
         </div>
-      </div>
-    </>
+        <div>
+          <Typography variant="h6" color="blue-gray">
+            Line Chart
+          </Typography>
+          <Typography
+            variant="small"
+            color="gray"
+            className="max-w-sm font-normal"
+          >
+            Visualize your data in a simple way using the
+            @material-tailwind/react chart plugin.
+          </Typography>
+        </div>
+      </CardHeader>
+      <CardBody className="px-2 pb-0">
+        <Chart {...chartConfig} />
+      </CardBody>
+    </Card>
   );
 }
