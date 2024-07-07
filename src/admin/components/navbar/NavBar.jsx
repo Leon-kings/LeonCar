@@ -86,8 +86,8 @@ export function NavbarWithSearch() {
           />
         </svg>
         <button className="button">
-        <a href="#" className="flex items-center">
-          Blocks
+        <a href="/admin/selled-cars" className="flex items-center">
+          Products
         </a></button>
       </Typography>
       <Typography

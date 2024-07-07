@@ -25,6 +25,19 @@ const DataFetcher = () => {
   };
 
  return (
+  <>
+  <div className="container">
+ <div className="line">
+  <div className="xleft">
+    <button className="btn">Add Users</button>
+  </div>
+  <div className="xleft">
+      <button className="btn">View All</button>
+  </div>
+
+ </div>
+
+ 
   <div>
     {loading ? (
       <p>Loading...</p>
@@ -37,7 +50,9 @@ const DataFetcher = () => {
         ))}
       </ul>
     )}
-  </div>    
+  </div>   
+     </div>
+  </> 
 );
 };
 
