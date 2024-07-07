@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
-import { Context } from '../context/cart.jsx'
-Context
+import { ToolContext } from '../context/cart.jsx'
+
 import ToolCart from './Cart.jsx'
 import { ToastContainer, } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,7 @@ import { BsCart } from 'react-icons/bs';
 export default function Products() {
   const [showModal, setshowModal] = useState(false);
   const [ToolProducts, setProducts] = useState([])
-  const { cartItems, addToCart , removeFromCart} = useContext( Context )
+  const { cartItems, addToCart , removeFromCart} = useContext( ToolContext )
 
   const toggleA = () => {
     setshowModal(!showModal);

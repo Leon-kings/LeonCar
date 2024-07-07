@@ -21,6 +21,7 @@ import { ToolsCartContext } from "./servicePages/tools/context/cart";
 import Dashboard from "./admin/Dashboard"
           import Users from "./admin/pages/Users"
           import SellCars from "./admin/pages/SellCars"
+          import Payment from "./servicePages/payment/Payment"
 const App = () => {
      return (
 
@@ -49,7 +50,9 @@ const App = () => {
                                         {/* admin pages */}
                                         <Route element={<Users />} path='/admin/users-browsered'></Route>
                                         <Route element={<SellCars />} path='/admin/selled-cars'></Route>
-
+                                        {/* Payment methods */}
+                                        <Route element={<Payment />} path='/Payment/Methods'></Route>
+                                        
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>

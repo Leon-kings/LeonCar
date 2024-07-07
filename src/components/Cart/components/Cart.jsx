@@ -79,7 +79,7 @@ export default function Cart ({showModal, toggle}) {
           >
             Clear cart
           </button>
-          <Link to={'/trial'}> <button className="button py-2 px-2 mx-2 my-2 ">Payment Methods</button> </Link>
+          <Link to={'/Payment/Methods'}> <button className="button py-2 px-2 mx-2 my-2 ">Payment Methods</button> </Link>
         </div>
           ) : (
             <button

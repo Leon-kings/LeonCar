@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { createContext, useState, useEffect } from 'react'
 
-export const Context = createContext()
+export const ToolContext = createContext()
 
 export const ToolsCartContext = ({ children }) => {
   const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems') 
@@ -59,7 +59,7 @@ export const ToolsCartContext = ({ children }) => {
   }, [cartItems]); // Include cartItems as a dependency here
 
   return (
-    <Context.Provider
+    <ToolContext.Provider
       value={{
         cartItems,
         addToCart,
@@ -69,7 +69,7 @@ export const ToolsCartContext = ({ children }) => {
       }}
     >
       {children}
-    </Context.Provider>
+    </ToolContext.Provider>
   );
 };
 

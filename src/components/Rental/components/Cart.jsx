@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { RentCartContext } from '../context/cart.jsx'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { Link } from 'react-router-dom'
 
 export default function RentCart ({showModal, toggle}) {
 
@@ -57,6 +58,7 @@ export default function RentCart ({showModal, toggle}) {
           >
             Clear cart
           </button>
+          <Link to={'/Payment/Methods'}> <button className="button py-2 px-2 mx-2 my-2 ">Payment Methods</button> </Link>
         </div>
           ) : (
             <button
