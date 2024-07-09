@@ -35,7 +35,7 @@ function SlideToolKit() {
                         <br />
                         <h2 className="color text-blue-500">Price:{img.inx} </h2>
                         <br />
-                            <Link to={'/ViewPage'}> <button className="button" key={index}>View More</button></Link> 
+                            <Link to={'/NewFeaturedTool'}> <button className="button" key={index}>View More</button></Link> 
                        </div>
                         <div className="xleft">
                           <b><h2 className="font-center">{img.head}</h2> </b>

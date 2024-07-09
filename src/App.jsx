@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import Services from "./pages/service/Services";
 import Contact from "./pages/contact/Contact"
 import NewFeatured from "./pages/newfeatured/NewFeatured"
+import NewFeaturedTool from "./pages/newfeatured/NewFeaturedTool"
 import Brands from "./pages/brands/Brands"
 import Login from "./pages/form/login/Login";
 import Register from "./pages/form/registration/Register"
@@ -38,6 +39,7 @@ const App = () => {
                                         <Route element={<Services />} path='/Service'></Route>
                                         <Route element={<Contact />} path='/Contact-us'></Route>
                                         <Route element={<NewFeatured />} path='/NewFeatured'></Route>
+                                        <Route element={<NewFeaturedTool />} path='/NewFeaturedTool'></Route>
                                         <Route element={<Brands />} path='/Branding'></Route>
                                         {/* Form Routes */}
                                         <Route element={<Login />} path='/Login'></Route>

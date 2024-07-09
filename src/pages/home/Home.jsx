@@ -72,6 +72,7 @@ function Home() {
           <SearchByDetails />
           <br />
         </div>
+        <br />
         </div>
         <br />
         <hr />

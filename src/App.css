@@ -46,7 +46,9 @@
   /* background-attachment: fixed; */
   background-size: cover;
 }
-
+.section{
+  border: 2px solid black;
+}
 
 .img{
   width: 100%;

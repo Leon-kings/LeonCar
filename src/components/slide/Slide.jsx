@@ -12,7 +12,9 @@ const Slide = () => {
 
     return (
         <section className='slider'>
-            <div className='text-center '>OUR SHOP</div>
+            <div className='text-center '>
+                <h2>We Offer Best Qualited Cars</h2>
+                 </div>
             <Swiper
                 modules={[Autoplay, A11y]}
                 spaceBetween={30} // Adjust the spacing as needed
@@ -37,7 +39,7 @@ const Slide = () => {
                        <br />
                        <h4>Capacity</h4>
                         <p className='slideContent' key={index}>{img.capacity}</p>
-                             <Link to={'/ViewPage'}> <button className="button" key={index}>View More</button></Link>
+                             <Link to={'/NewFeatured'}> <button className="button" key={index}>View More</button></Link>
                        </div>
 
                     </SwiperSlide>
