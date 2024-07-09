@@ -188,6 +188,9 @@ a {
   /* margin-left: 1.7em; */
   height: 220px;
 }
+.white{
+  background-color: #ffffff;
+}
 /* responsiviness */
 
 /* Extra small devices (phones, 480px and down) */

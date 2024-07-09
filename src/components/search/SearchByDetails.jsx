@@ -23,10 +23,10 @@ export class SearchByDetails extends React.Component {
 
 
         <div className="container">  
-        <div className="white text-neutral-900">
+        <div className=" text-neutral-900">
           <div className="block">
 <form className="form " onSubmit={this.handleSubmit}>
-    <div className="xleft">
+    <div className="xleft bg-white">
   <label className="head" htmlFor="head">Years</label>
   <select className="section" value={this.state.value} onChange={this.handleChange}>
        
@@ -39,7 +39,7 @@ export class SearchByDetails extends React.Component {
         <option value="2019">2019</option>
     </select>
     </div>
-    <div className="xleft">
+    <div className="xleft bg-white">
     <label className="head" htmlFor="head">Brand</label>
     <select className="section" value={this.state.value} onChange={this.handleChange}>
         
@@ -52,7 +52,7 @@ export class SearchByDetails extends React.Component {
         <option value="2019">Ford</option>
     </select>
     </div>
-    <div className="xleft">
+    <div className="xleft bg-white">
     <label className="head" htmlFor="head">Model</label>
     <select className="section" value={this.state.value} onChange={this.handleChange}>
        
@@ -65,7 +65,7 @@ export class SearchByDetails extends React.Component {
         <option value="2019">Carina E</option>
     </select>
    </div>
-   <div className="xleft">
+   <div className="xleft bg-white">
     <button className="button ">Submit</button>
      </div>
 </form>

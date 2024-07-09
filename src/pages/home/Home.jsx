@@ -64,12 +64,14 @@ function Home() {
 
           <br />
           <hr />
+          <div className="container">
           <div className="head">
             <h2 className="text px-1 py-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus corporis deserunt, odio placeat deleniti accusantium enim tempora
               sapiente, error, voluptatem ipsum aperiam unde eaque necessitatibus nemo ab ad numquam mollitia?</h2>
           </div>
           <SearchByDetails />
           <br />
+        </div>
         </div>
         <br />
         <hr />
