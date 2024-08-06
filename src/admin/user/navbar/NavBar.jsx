@@ -63,7 +63,7 @@ export function NavbarWithSearch() {
             fill="#90A4AE"
           />
         </svg> <button className="button">
-        <a href="/admin/users-browsered" className="flex items-center">
+        <a className="flex items-center">
           Users
         </a></button>
       </Typography>

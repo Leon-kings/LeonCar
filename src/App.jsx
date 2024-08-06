@@ -23,6 +23,8 @@ import Dashboard from "./admin/Dashboard"
           import Users from "./admin/pages/Users"
           import SellCars from "./admin/pages/SellCars"
           import Payment from "./servicePages/payment/Payment"
+          import CreatePost from "./pages/createContent/CreatePost"
+                  import UserDashboard from "./admin/user/UserDashboard"
 const App = () => {
      return (
 
@@ -52,9 +54,12 @@ const App = () => {
                                         {/* admin pages */}
                                         <Route element={<Users />} path='/admin/users-browsered'></Route>
                                         <Route element={<SellCars />} path='/admin/selled-cars'></Route>
+                                        {/* user admin pannel pages */}
+                                        {/* <Route element={<Product />} path='/user/product'></Route> */}
+                                        <Route element={<UserDashboard />} path='/Dashboard/User'></Route>
                                         {/* Payment methods */}
                                         <Route element={<Payment />} path='/Payment/Methods'></Route>
-                                        
+                                        <Route element={<CreatePost />} path='/CreatePost'></Route>
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>

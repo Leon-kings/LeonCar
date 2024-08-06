@@ -83,11 +83,13 @@ function Home() {
         <div className="container">
           <div className="container">
             <div className="block">
-              <h3 className="text px-2 py-2 text-black">
+              <div className="head">
+              <h2 className="text px-2 py-2 text-black">
                 Lorem ipsum dolor sit amet consectetur,
                 adipisicing elit. Ad, beatae! Esse sed maxime unde,
                 eius quae quis nostrum officiis alias odit quia harum
-                natus animi ipsa, saepe dolor deserunt ab!</h3>
+                natus animi ipsa, saepe dolor deserunt ab!</h2>
+                </div>
             </div>
             <div className="left">
               <div className="block">
