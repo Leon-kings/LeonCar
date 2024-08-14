@@ -16,7 +16,7 @@
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^3.5.0",
     "apexcharts": "^3.49.2",
-    "axios": "^1.7.2",
+    "axios": "^1.7.4",
     "bootstrap": "^5.3.3",
     "date-fns": "^3.6.0",
     "mdb-react-ui-kit": "^8.0.0",

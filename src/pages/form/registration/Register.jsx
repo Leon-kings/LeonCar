@@ -1,9 +1,9 @@
 
 import  { useState } from "react";
 import FormInput from "../../../components/action/FormInput"
-import { Link } from "react-router-dom";
-// import axios from "axios";
-
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+// useNavigate
 const App =()=>{
   const [values,setValues] = useState({
   
@@ -13,7 +13,7 @@ const App =()=>{
     Names:""
    
   });
-  // const Navigate =useNavigate()
+  const Navigate =useNavigate()
   const inputs=[
     {
       id:1,
@@ -33,15 +33,15 @@ const App =()=>{
       label:"email",
       required:true
     },
-    {
-      id:3,
-      name:"telephone",
-      type:"phone",
-      placeholder:"phone number",
-      errorMessage:"phone number must be 10 numbers",
-      label:"Your phone number",
-      required:true,
-    },
+    // {
+    //   id:3,
+    //   name:"telephone",
+    //   type:"phone",
+    //   placeholder:"phone number",
+    //   errorMessage:"phone number must be 10 numbers",
+    //   label:"Your phone number",
+    //   required:true,
+    // },
 
     {
       id:4,
@@ -61,19 +61,20 @@ const App =()=>{
 
   const handleSubmit = async(e) =>{
     e.preventDefault();
-  console.log(values);
-  //   try{
+  // console.log(values);
+    try{
      
-  //   const dt = await axios.post('https://getcard.onrender.com/users',values)
-  //   .then(() =>{
-  //     alert('User Registered successfully');
-  //    Navigate('/login')
+await axios.post(' https://leoncarbackend.onrender.com/register',values)
+    .then(() =>{
+      alert('User Registered successfully');
+     Navigate('/login');
+    //  console.log(dt);
       
-  //   })
-  // }
-  //   catch(err){
-  //     console.log(err)
-  //   }
+    })
+  }
+    catch(err){
+      console.log(err)
+    }
  
   };
 

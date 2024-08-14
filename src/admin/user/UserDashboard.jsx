@@ -4,6 +4,7 @@ function Dashboard() {
   return (
     <>
     <div className="container">
+
         <div className="container">
           <div className="head">
             <NavbarWithSearch/>
