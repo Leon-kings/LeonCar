@@ -8,7 +8,6 @@ const App =()=>{
   const [values,setValues] = useState({
   
     email:"",
-    telephone:"",
     password:"",
     Names:""
    
@@ -33,18 +32,9 @@ const App =()=>{
       label:"email",
       required:true
     },
-    // {
-    //   id:3,
-    //   name:"telephone",
-    //   type:"phone",
-    //   placeholder:"phone number",
-    //   errorMessage:"phone number must be 10 numbers",
-    //   label:"Your phone number",
-    //   required:true,
-    // },
 
     {
-      id:4,
+      id:3,
       name:"password",
       type:"password",
       placeholder:"password",

@@ -38,32 +38,32 @@ export const brands = [
     inx: 'Ford Motor Company is an American multinational automobile manufacturer headquartered in Dearborn, Michigan, United States.',
     URL: ' https://static.vecteezy.com/system/resources/previews/020/336/454/original/ford-logo-ford-icon-free-free-vector.jpg'
   }
- ,
- {
-  id: 6,
-  head: ' Land Rover',
-  inx: 'Land Rover is a British brand of predominantly four-wheel drive, off-road capable vehicles, owned by multinational car manufacturer Jaguar Land Rover',
-  URL: 'https://www.shutterstock.com/image-photo/london-great-britain-february-22-260nw-1320455477.jpg'
-}
-,
-{
- id: 7,
- head: ' Zhengzhou Yutong Bus',
- inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
- URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
-}
-,
-{
- id: 8,
- head: ' Zhengzhou Yutong Bus',
- inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
- URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
-}
-,
-{
- id: 9,
- head: ' Zhengzhou Yutong Bus',
- inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
- URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
-}
+//  ,
+//  {
+//   id: 6,
+//   head: ' Land Rover',
+//   inx: 'Land Rover is a British brand of predominantly four-wheel drive, off-road capable vehicles, owned by multinational car manufacturer Jaguar Land Rover',
+//   URL: 'https://www.shutterstock.com/image-photo/london-great-britain-february-22-260nw-1320455477.jpg'
+// }
+// ,
+// {
+//  id: 7,
+//  head: ' Zhengzhou Yutong Bus',
+//  inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
+//  URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
+// }
+// ,
+// {
+//  id: 8,
+//  head: ' Zhengzhou Yutong Bus',
+//  inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
+//  URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
+// }
+// ,
+// {
+//  id: 9,
+//  head: ' Zhengzhou Yutong Bus',
+//  inx: 'Yutong Bus is the No.1 global sales of electric buses & coaches. We offer various new energy bus, tourist coach, and city bus for public transportation.',
+//  URL: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yutong_Bus_and_Coach_Logo.jpg'
+// }
 ]

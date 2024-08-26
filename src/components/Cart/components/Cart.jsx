@@ -75,6 +75,7 @@ export default function Cart ({showModal, toggle}) {
             onClick={() => {
               clearCart()
               notifyCartCleared()
+              window.reload();
             }}
           >
             Clear cart

@@ -261,15 +261,9 @@ function Home() {
                 <Company />
               </div>
             </div>
-            <div className="head text-cyan-300">
-              That`s Our Brands Of Cars We Offers
-            </div>
+          
           </div>
-          <div className="head">
-            <h2 className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Veniam laudantium expedita est quae dolore voluptas error accusantium placeat,
-              culpa provident illo obcaecati rerum. Amet deleniti illo debitis. Dicta, omnis doloribus!</h2>
-          </div>
+       
         </div>
         {/* Branding sites ends*/}
         {/*  */}

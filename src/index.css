@@ -191,6 +191,10 @@ a {
 .white{
   background-color: #ffffff;
 }
+.sxleft{
+  width: 20%;
+  float: left;
+}
 /* responsiviness */
 
 /* Extra small devices (phones, 480px and down) */
