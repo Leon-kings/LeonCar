@@ -35,10 +35,7 @@ function Home() {
                 ipsa omnis repudiandae cumque culpa illum cum corporis.</p>
               <h2 className="title text-center ">GET YOUR DESIRED CAR IN RESONABLE PRICE</h2>
 
-              <h4 className="stitle text-center">Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quisquam, minima pariatur. Nobis facere eveniet distinctio
-                sed provident cumque tempore quia delectus, porro, possimus doloribus velit
-                voluptatibus inventore. Harum, sit labore!</h4>
+              <h4 className="title text-center">Leon is happy to serve you Your favourate Cars , Choose The Best Cars You want and Your repairment Kits. </h4>
               <div className="stitle">
                 <Link to={'/contact'}>
                   <button className="button">Contact us</button>
@@ -66,8 +63,7 @@ function Home() {
           <hr />
           <div className="container">
           <div className="head">
-            <h2 className="text px-1 py-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus corporis deserunt, odio placeat deleniti accusantium enim tempora
-              sapiente, error, voluptatem ipsum aperiam unde eaque necessitatibus nemo ab ad numquam mollitia?</h2>
+            <h2 className="text px-1 py-2">Search Your Model , Cars and Year of Manufacturing</h2>
           </div>
           <SearchByDetails />
           <br />
@@ -84,7 +80,7 @@ function Home() {
           <div className="container">
             <div className="block">
               <div className="head">
-              <h2 className="text px-2 py-2 text-black">
+              <h2 className="hidden text px-2 py-2 text-black">
                 Lorem ipsum dolor sit amet consectetur,
                 adipisicing elit. Ad, beatae! Esse sed maxime unde,
                 eius quae quis nostrum officiis alias odit quia harum
