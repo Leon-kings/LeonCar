@@ -208,10 +208,7 @@ a {
     width: 100%;
   }
   /* home */
-  .backImage .front .card{
-    width: 100%;
-   
-  }
+
   .backImage{
     background-size: cover;
     padding: 0;
@@ -245,14 +242,7 @@ a {
 .column{
   width: 100%;
 }
-*{
-width: 100%;
-padding: 0.2em;
 
-}
-.img{
-  width: 100%;
-}
 
 
 }

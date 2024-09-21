@@ -54,7 +54,7 @@ export default function CheckoutForm() {
   const [cardExpires, setCardExpires] = React.useState("");
  
   return (<>
-  <h2 className="head">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa officiis assumenda, quaerat tempora soluta quisquam odit optio! Autem sint sunt obcaecati omnis fugit, eaque quae, nihil et blanditiis illo quisquam!</h2>
+  <h2 className="head">while creating vendor i am giving the payment terms. based on the selected payment terms i have to retrieve the text and display it on the purchase order format. How can i do that one. please help me.</h2>
     <div className="left"></div>
     <Card className="w-full max-w-[24rem] content-center">
       <CardHeader
