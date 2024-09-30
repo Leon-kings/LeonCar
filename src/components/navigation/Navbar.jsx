@@ -24,17 +24,17 @@ function Navbar() {
               <a href='/' className={`${styles.navLink}`}>HOME</a>
             </li>
             <li onClick={removeActive}>
-              <Link href={'/Service'} className={`${styles.navLink}`}>SERVICES</Link>
+              <Link to={'/Service'} className={`${styles.navLink}`}>SERVICES</Link>
             </li>
         
             <li onClick={removeActive}>
-              <Link href={'/NewFeatured'} className={`${styles.navLink}`}>NEW</Link>
+              <Link to={'/NewFeatured'} className={`${styles.navLink}`}>NEW</Link>
             </li>
             <li onClick={removeActive}>
-              <Link href={'/Branding'} className={`${styles.navLink}`}>BRANDS</Link>
+              <Link to={'/Branding'} className={`${styles.navLink}`}>BRANDS</Link>
             </li>
             <li onClick={removeActive}>
-              <Link href={'/Contact-us'} className={`${styles.navLink}`}>CONTACT</Link>
+              <Link to={'/Contact-us'} className={`${styles.navLink}`}>CONTACT</Link>
             </li>
           </ul>
           <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`}  onClick={toggleActiveClass}>
