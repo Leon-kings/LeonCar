@@ -9,14 +9,15 @@ const App =()=>{
   
     email:"",
     password:"",
-    Names:""
+    fullname:"",
+    phone:""
    
   });
   const Navigate =useNavigate()
   const inputs=[
     {
       id:1,
-      name:"Names",
+      name:"fullname",
       type:"text",
       placeholder:"Names",
       errorMessage:"Names needed ",
@@ -32,9 +33,18 @@ const App =()=>{
       label:"email",
       required:true
     },
-
     {
       id:3,
+      name:"phone",
+      type:"text",
+      placeholder:"+250787944577",
+      errorMessage:"Phone should start with country code +250",
+      label:"email",
+      required:true
+    },
+
+    {
+      id:4,
       name:"password",
       type:"password",
       placeholder:"password",
@@ -54,7 +64,7 @@ const App =()=>{
   // console.log(values);
     try{
      
-await axios.post(' https://leoncarbackend.onrender.com/register',values)
+await axios.post(' https://backendproject-8m9r.onrender.com/users',values)
     .then(() =>{
       alert('User Registered successfully');
      Navigate('/login');
