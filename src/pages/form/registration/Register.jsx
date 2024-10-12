@@ -61,20 +61,15 @@ const App =()=>{
 
   const handleSubmit = async(e) =>{
     e.preventDefault();
-  // console.log(values);
-    try{
-     
-await axios.post(' https://backendproject-8m9r.onrender.com/users',values)
-    .then(() =>{
+    try {
+      const response = await axios.post('https://backendproject-8m9r.onrender.com/users', values);
       alert('User Registered successfully');
-     Navigate('/login');
-    //  console.log(dt);
-      
-    })
-  }
-    catch(err){
-      console.log(err)
-    }
+      // console.log(response)
+      Navigate('/login');
+  } catch (err) {
+      console.log(err);
+      console.log('Handle the error');
+  }  
  
   };
 
