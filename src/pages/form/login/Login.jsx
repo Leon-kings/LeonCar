@@ -80,9 +80,9 @@ const Login =()=>{
         <h2>Log in</h2>
         </div>
         
-        <div className="contain">
+        <div className="container">
         {inputs.map((input)=>(
-          <FormInput key={input.id}
+          <FormInput key={input.id} className="p-3"
           {...input}value={values[input.name]}
           onChange={onChange} />
         ))}

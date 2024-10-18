@@ -62,15 +62,13 @@ const App =()=>{
   const handleSubmit = async(e) =>{
     e.preventDefault();
     try {
-      const response = await axios.post('https://backendproject-8m9r.onrender.com/users', values);
-      alert('User Registered successfully');
-      // console.log(response)
-      Navigate('/login');
-  } catch (err) {
-      console.log(err);
-      console.log('Handle the error');
-  }  
- 
+        await axios.post('https://backendproject-8m9r.onrender.com/users', values);
+        alert('User Registered successfully');
+        // console.log(values);
+        Navigate('/login');
+    } catch (err) {
+        console.log(err);
+    } 
   };
 
 
@@ -88,17 +86,18 @@ const App =()=>{
    
       <form onSubmit={handleSubmit} >
        <div className="head">
-        <h1>Register</h1>
+        <button className="p-3">
+        <h1>Register</h1></button>
         </div>
         <div className="contain">
         {inputs.map((input)=>(
-          <FormInput key={input.id}
+          <FormInput key={input.id} className="p-3"
           {...input}value={values[input.name]}
           onChange={onChange} />
         ))}
         <div className="head">
         <button className="btn">Submit</button>
-        <p>If you do have an account got <Link to="/Login"><b> <button>Login</button></b></Link> </p></div>
+        <p>If you do have an account got <Link to="/Login"><b> <button className="p-3">Login</button></b></Link> </p></div>
         </div>
       </form>
     </div>
