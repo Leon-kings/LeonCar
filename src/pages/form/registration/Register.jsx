@@ -53,10 +53,6 @@ const App = () => {
       // pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
       required: true
     },
-
-
-
-
   ];
 
   const handleSubmit = async (e) => {
@@ -72,10 +68,10 @@ const App = () => {
     }
   };
 
-
-
   const onChange = (e) => {
+
     setValues({ ...values, [e.target.name]: e.target.value });
+
   }
   return (
     <>
@@ -84,7 +80,6 @@ const App = () => {
         <div className="left">
 
           <div className="app">
-
             <form onSubmit={handleSubmit} >
               <div className="head">
                 <button className="p-3">
