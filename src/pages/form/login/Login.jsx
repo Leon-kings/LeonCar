@@ -1,11 +1,8 @@
 import  { useState } from "react";
-// import React from "react";
-// import "../../../css/form/universal.css"
 import FormInput from "../../../components/action/FormInput"
-// import {useNavigate} from "react-router-dom"
-// import Screenshot from "../../../assets/images/Screenshot.png"
+import {useNavigate} from "react-router-dom"
 import { Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 const Login =()=>{
   
   const [values,setValues] = useState({
@@ -15,7 +12,7 @@ const Login =()=>{
     password:"",
   
   });
-  // const Navigate =useNavigate();
+  const Navigate =useNavigate();
   const inputs=[
   
  
@@ -43,26 +40,18 @@ const Login =()=>{
 
 // fetching data from database
          // handleSubmit
-  const handleSubmit = async(e) =>{
-    e.preventDefault();
-    // try{
-     
-    //   const dt = await axios.post('https://getcard.onrender.com/users/auth',values)
-    //   .then(() =>{
-       
-    //       Navigate('/Dashboard')
-        
-    //     alert('User Logged in successfully');
-    //    Navigate('/')
-    
-    //   })
-    // }
-    //   catch(err){
-    //     console.log(err)
-    //   }
-    console.log(values);
- 
-  }; 
+         const handleSubmit = async (e) => {
+          e.preventDefault();
+          console.log(values);
+          try {
+            await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
+            alert('User logged successfully');
+           
+            Navigate('/Dashboard');
+          } catch (err) {
+            console.log(err);
+          }
+        };
 
 
 
