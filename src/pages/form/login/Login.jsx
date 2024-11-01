@@ -44,6 +44,7 @@ const Login =()=>{
           e.preventDefault();
           console.log(values);
           if(values.email==='admin@gmail.com' && values.password==='admin'){
+            alert('Welcome LD');
             Navigate('/Dashboard');
           }
           try {
