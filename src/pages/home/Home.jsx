@@ -8,7 +8,7 @@ import { BsCart4, BsListCheck, BsPeople, BsWallet2 } from "react-icons/bs"
 import SlideToolKit from "../../components/slide/SlideToolKit"
 import Search from "../../components/search/Search"
 import CarSell from "../../servicePages/rent/CarSell"
-import { SearchByDetails } from "../../components/search/SearchByDetails"
+// import { SearchByDetails } from "../../components/search/SearchByDetails"
 import Tools from "../../servicePages/tools/Tools"
 import App from "../../components/Cart/App"
 import Testimony from "../testmony/Testimony"
@@ -61,13 +61,13 @@ function Home() {
 
           <br />
           <hr />
-          <div className="container">
+          {/* <div className="container">
           <div className="head">
             <h2 className="text px-1 py-2">Search Your Model , Cars and Year of Manufacturing</h2>
           </div>
           <SearchByDetails />
           <br />
-        </div>
+        </div> */}
         <br />
         </div>
         <br />
@@ -393,7 +393,7 @@ function Home() {
         <hr />
 
 
-        <div className="last">
+       <div className="last">
           <h2 className="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rerum neque
             rem deserunt veniam illum maxime enim, id fugiat aspernatur molestias exercitationem suscipit possimus dolor
             officiis vitae! Eaque, vitae ad.</h2>
@@ -415,7 +415,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <br /><hr />
+         <br /><hr />
       </div>
 
     </>

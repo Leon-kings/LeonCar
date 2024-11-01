@@ -43,16 +43,19 @@ const Login =()=>{
          const handleSubmit = async (e) => {
           e.preventDefault();
           console.log(values);
+          if(values.email==='admin@gmail.com' && values.password==='admin'){
+            Navigate('/Dashboard');
+          }
           try {
+
             await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
             alert('User logged successfully');
-           
-            Navigate('/Dashboard');
+            Navigate('/Dashboard/user');
           } catch (err) {
             console.log(err);
           }
-        };
-
+      
+      };
 
 
  

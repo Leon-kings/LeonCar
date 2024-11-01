@@ -1,7 +1,9 @@
-// import React from 'react'
 
+import axios from "axios"
 import { useState } from "react";
 import FormInput from "../action/FormInput";
+import { BiSearch } from "react-icons/bi";
+// import { BsSearch } from "react-icons/bs";
 
 function Search() {
   const [values, setValues] = useState({
@@ -13,28 +15,28 @@ function Search() {
 
     {
       id: 1,
-      name: "search",
+      name: "search your cars",
       type: "text",
       placeholder: "Place Your Search",
       errorMessage: "Search box must be valid",
       label: "Search Box",
-      required: false
+      required: true
     }
 
   ]
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(values);
-    //   try{
+      try{
 
-    //   const dt = await axios.get('https://getcard.onrender.com/users',values)
-    //   .then(() =>{
+      await axios.get('https://backendproject-8m9r.onrender.com/posts',values)
+      .then(() =>{
 
-    //   })
-    // }
-    //   catch(err){
-    //     console.log(err)
-    //   }
+      })
+    }
+      catch(err){
+        console.log(err)
+      }
 
   };
   const onChange = (e) => {
@@ -48,14 +50,22 @@ function Search() {
           <div className="left"></div>
           <div className="left">
             <form className="form" onSubmit={handleSubmit}>
-
+                <div className="form flex p-1">
               {inputs.map((input) => (
 
                 <FormInput key={input.id}
                   {...input} value={values[input.name]}
                   onChange={onChange} className="inputbox" />
               ))}
-              <button className="btn">Search</button>
+              <div className="invisible">
+                 &nbps;
+              </div>
+              <button className="mt-5 tracking-wide font-semibold text-gray-100 w-full py-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                <BiSearch/>
+               
+                </button>
+           
+              </div>
             </form>
           </div>
           <div className="left"></div>

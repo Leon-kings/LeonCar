@@ -1,8 +1,8 @@
-// import Matrix from "./components/pricing/Matrix"
-import Chart from "./components/chart/Chart"
-import Barchart from "./components/Barchart/Barchart"
-import Piechart from "./components/pie/Piechart"
-import {NavbarWithSearch} from "./components/navbar/NavBar"
+import Matrix from "./components/pricing/Matrix"
+import Chart from "./components/pricing/Chart"
+import Barchart from "./components/pricing/Barchart"
+import Piechart from "./components/pricing/Piechart"
+import {NavbarWithSearch} from "./components/pricing/NavBar"
 function Dashboard() {
   return (
     <>
@@ -11,7 +11,7 @@ function Dashboard() {
           <div className="head">
             <NavbarWithSearch/>
           </div>
-            {/* <Matrix/> */}
+            <Matrix/>
             <div className="left">
                 <Chart/>
             </div>

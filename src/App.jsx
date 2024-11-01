@@ -56,10 +56,12 @@ const App = () => {
                                         <Route element={<SellCars />} path='/admin/selled-cars'></Route>
                                         {/* user admin pannel pages */}
                                         {/* <Route element={<Product />} path='/user/product'></Route> */}
-                                        <Route element={<UserDashboard />} path='/Dashboard/User'></Route>
+                                        <Route element={<UserDashboard />} path='/Dashboard/user'></Route>
                                         {/* Payment methods */}
                                         <Route element={<Payment />} path='/Payment/Methods'></Route>
                                         <Route element={<CreatePost />} path='/CreatePost'></Route>
+                                        {/* admin pannel */}
+                                        {/* <Route element={<UserDashboard />} path='/UserDashboard'></Route> */}
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>
