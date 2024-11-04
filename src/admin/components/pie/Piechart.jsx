@@ -56,12 +56,12 @@ import {
               color="gray"
               className="max-w-sm font-normal"
             >
-              Visualize your data in a simple way using the
-              @material-tailwind/react chart plugin.
+              Visualize your data in a simple way 
+             
             </Typography>
           </div>
         </CardHeader>
-        <CardBody className="mt-4 grid place-items-center px-2">
+        <CardBody className="mt-3 grid place-items-center px-2">
           <Chart {...chartConfig} />
         </CardBody>
       </Card>

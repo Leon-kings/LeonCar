@@ -7,8 +7,9 @@ import {
   IconButton,
   Input,
 } from "@material-tailwind/react";
+
  
-export function NavbarWithSearch() {
+export function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
  
   React.useEffect(() => {
@@ -39,9 +40,9 @@ export function NavbarWithSearch() {
           />
         </svg>
         <button className="button">
-        <a href="#" className="flex items-center">
-         Requests
-        </a></button>
+       
+         Create
+       </button>
       </Typography>
       <Typography
         as="li"
@@ -63,9 +64,9 @@ export function NavbarWithSearch() {
             fill="#90A4AE"
           />
         </svg> <button className="button">
-        <a href="/admin/users-browsered" className="flex items-center">
-          Users
-        </a></button>
+        
+          Update
+        </button>
       </Typography>
       <Typography
         as="li"
@@ -85,10 +86,11 @@ export function NavbarWithSearch() {
             fill="#90A4AE"
           />
         </svg>
+        
         <button className="button">
-        <a href="/admin/selled-cars" className="flex items-center">
-          Products
-        </a></button>
+        
+        Delete
+       </button>
       </Typography>
       <Typography
         as="li"
@@ -111,9 +113,9 @@ export function NavbarWithSearch() {
           />
         </svg>
         <button className="button">
-        <a href="#" className="flex items-center">
-         Payments
-        </a></button>
+       
+         View
+        </button>
       </Typography>
     </ul>
   );
@@ -124,7 +126,7 @@ export function NavbarWithSearch() {
         <Typography
           className="mr-4 text-black cursor-pointer py-1.5 font-medium"
         >
-          Admin Dashboard
+         
         </Typography>
         <div className=" lg:block">{navList}</div>
    

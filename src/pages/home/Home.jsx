@@ -1,4 +1,3 @@
-
 import "../../assets/css/home/home.css"
 import { Link } from "react-router-dom"
 import Slide from "../../components/slide/Slide"
@@ -8,7 +7,6 @@ import { BsCart4, BsListCheck, BsPeople, BsWallet2 } from "react-icons/bs"
 import SlideToolKit from "../../components/slide/SlideToolKit"
 import Search from "../../components/search/Search"
 import CarSell from "../../servicePages/rent/CarSell"
-// import { SearchByDetails } from "../../components/search/SearchByDetails"
 import Tools from "../../servicePages/tools/Tools"
 import App from "../../components/Cart/App"
 import Testimony from "../testmony/Testimony"
@@ -17,8 +15,6 @@ import OurTeam from "../team/OurTeam"
 import QuestionPage from "../../components/Qtn/QuestionPage"
 
 function Home() {
-
-
   return (
     <>
       {/* Body space */}

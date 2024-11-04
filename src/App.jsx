@@ -22,9 +22,13 @@ import { ToolsCartContext } from "./servicePages/tools/context/cart";
 import Dashboard from "./admin/Dashboard"
           import Users from "./admin/pages/Users"
           import SellCars from "./admin/pages/SellCars"
+          import Create from "./admin/pages/post/Create"
+          import Createuser from "./admin/pages/users/Create-user"
           import Payment from "./servicePages/payment/Payment"
           import CreatePost from "./pages/createContent/CreatePost"
                   import UserDashboard from "./admin/user/UserDashboard"
+import Myprofile from "./admin/pages/my profile/Myprofile";
+   import Userview from "./admin/pages/view/users/Userview"
 const App = () => {
      return (
 
@@ -52,16 +56,18 @@ const App = () => {
                                         <Route element={<FieldTeam />} path="/Request/ImediateTeamSupport"> </Route>
                                         <Route element={<FormCarRFental />} path='/FormCarRFental'></Route>
                                         {/* admin pages */}
-                                        <Route element={<Users />} path='/admin/users-browsered'></Route>
+                                        <Route element={<Users />} path='/admin/users'></Route>
                                         <Route element={<SellCars />} path='/admin/selled-cars'></Route>
+                                        <Route element={<Create />} path='/admin/create/post'></Route>
+                                        <Route element={<Createuser />} path='/admin/create/user'></Route>
                                         {/* user admin pannel pages */}
-                                        {/* <Route element={<Product />} path='/user/product'></Route> */}
+                                        <Route element={<Myprofile />} path='admin/profile'></Route>
                                         <Route element={<UserDashboard />} path='/Dashboard/user'></Route>
                                         {/* Payment methods */}
                                         <Route element={<Payment />} path='/Payment/Methods'></Route>
                                         <Route element={<CreatePost />} path='/CreatePost'></Route>
                                         {/* admin pannel */}
-                                        {/* <Route element={<UserDashboard />} path='/UserDashboard'></Route> */}
+                                        <Route element={<Userview />} path='/user'></Route>
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>

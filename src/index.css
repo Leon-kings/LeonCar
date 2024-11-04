@@ -195,6 +195,11 @@ a {
   width: 20%;
   float: left;
 }
+.xxleft{
+  width: 80%;
+  float: left;
+}
+
 /* responsiviness */
 
 /* Extra small devices (phones, 480px and down) */
@@ -241,6 +246,22 @@ a {
 }
 .column{
   width: 100%;
+}
+.xxleft{
+  width: 100%;
+}
+.main,table,th,tr{
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
 }
 
 
