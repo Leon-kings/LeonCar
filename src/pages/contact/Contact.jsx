@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 function Contact() {
   return (
     <>
+    <div className="App">
     <div className="container">
     
         <div className="heads">
@@ -53,7 +54,7 @@ function Contact() {
           </div>
          
     </div>
-    
+    </div>
     </>
   )
 }

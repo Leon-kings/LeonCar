@@ -1,61 +1,177 @@
 import { useEffect, useState } from "react"
-import {NavbarWith} from "./NavBar"
+import {
 
-const Productview = () => {
+
+  InputGroup,
+  Toaster,
+  Position,
+} from "@blueprintjs/core"
+
+const AppToaster = Toaster.create({
+  position: Position.TOP,
+})
+
+function App() {
   const [users, setUsers] = useState([])
+  const [newName, setNewName] = useState("")
+  const [newEmail, setNewEmail] = useState("")
+  const [newWebsite, setNewWebsite] = useState("")
 
-  const fetchData = () => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        setUsers(data)
-      })
-  }
   useEffect(() => {
-    fetchData()
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(response => response.json())
+      .then(json => setUsers(json))
   }, [])
 
-  return (
-    <>
-    <div className="container">
-        <div className="head">
-        <NavbarWith/>
-      </div>
-<div className="body">
-      {/* body part */}
-      <div className="main">
-        <div className="body">
-<table className="table">
-  <thead>
-    <tr>
-      <th className="head bg-green-200 text-blue-600">ID</th>
-      <th className="head bg-green-200 text-blue-600">Names</th>
-      <th className="head bg-green-200 text-blue-600">Email</th>
-      <th className="head bg-green-200 text-blue-600">Telephone</th>
-      <th className="head bg-green-200 text-blue-600">Password</th>
-      <th className="head bg-green-200 text-black" colSpan={2}>ACTION</th>
-    </tr>
-  </thead>
-  <tbody>
-    {/* user view */}
-      {users.length > 0 && (
-        <tr>
-          {users.map(user => (
-            <td key={user.id}>{user.name}</td>
-          ))}
-        </tr>
-      )}
-  </tbody>
-</table>
-        </div>
+  const addUser = () => {
+    const name = newName.trim()
+    const email = newEmail.trim()
+    const website = newWebsite.trim()
+    if (name && email && website) {
+      fetch("https://jsonplaceholder.typicode.com/users", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          email,
+          website,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then(response => response.json())
+        .then(data => {
+          setUsers([...users, data])
+          setNewName("")
+          setNewEmail("")
+          setNewWebsite("")
+          AppToaster.show({
+            message: "User added successfully",
+            intent: "success",
+            timeout: 3000,
+          })
+        })
+    }
+  }
 
-    </div> 
+  const updateUser = id => {
+    const user = users.find(user => user.id === id)
+
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(user),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then(response => response.json())
+      .then(() => {
+        AppToaster.show({
+          message: "User updated successfully",
+          intent: "success",
+          timeout: 3000,
+        })
+      })
+  }
+
+  const deleteUser = id => {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+      method: "DELETE",
+    })
+      .then(response => response.json())
+      .then(() => {
+        setUsers(values => {
+          return values.filter(item => item.id !== id)
+        })
+        AppToaster.show({
+          message: "User deleted successfully",
+          intent: "success",
+          timeout: 3000,
+        })
+      })
+  }
+
+  const onChangeHandler = (id, key, value) => {
+    setUsers(values => {
+      return values.map(item =>
+        item.id === id ? { ...item, [key]: value } : item
+      )
+    })
+  }
+
+  return (
+    <div className="App">
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Website</th>
+            <th colSpan={2}>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map(user => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td onChange={value => onChangeHandler(user.id, "email", value)}>
+                {user.email}
+              </td>
+              <td  onChange={value => onChangeHandler(user.id, "website", value)}>
+                {user.website}
+              </td>
+              <td>
+                <button className="bg-green-400 p-4" onClick={() => updateUser(user.id)}>
+                  Update
+                </button>
+               </td>
+               <td>
+                <button className="bg-red-600 p-4" onClick={() => deleteUser(user.id)}>
+                  Delete
+                </button>
+             </td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>
+              <InputGroup
+                value={newName}
+                className="p-4"
+                onChange={e => setNewName(e.target.value)}
+                placeholder="Add name here..."
+              />
+            </td>
+            <td>
+              <InputGroup
+                placeholder="Add email here..."
+        className="p-4"
+                value={newEmail}
+                onChange={e => setNewEmail(e.target.value)}
+              />
+            </td>
+            <td>
+              <InputGroup
+              
+                placeholder="Add website here..."
+                value={newWebsite}
+                onChange={e => setNewWebsite(e.target.value)}
+              />
+            </td>
+            <td>
+              <button className="bg-blue-600 p-4" onClick={addUser}>
+                Add user
+              </button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
     </div>
-    </div>
-    </>
   )
 }
 
-export default Productview
+export default App

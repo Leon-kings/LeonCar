@@ -29,6 +29,7 @@ import Dashboard from "./admin/Dashboard"
                   import UserDashboard from "./admin/user/UserDashboard"
 import Myprofile from "./admin/pages/my profile/Myprofile";
    import Userview from "./admin/pages/view/users/Userview"
+   import Productview from "./admin/pages/view/products/Productview"
 const App = () => {
      return (
 
@@ -68,6 +69,7 @@ const App = () => {
                                         <Route element={<CreatePost />} path='/CreatePost'></Route>
                                         {/* admin pannel */}
                                         <Route element={<Userview />} path='/user'></Route>
+                                        <Route element={<Productview />} path='/view'></Route>
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>

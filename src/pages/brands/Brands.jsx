@@ -5,6 +5,7 @@ import { brands } from "../../assets/data/brand"
 function Brands() {
   return (
    <>
+   
    <div className="container">
     <div className="head">
       <div className="head">
