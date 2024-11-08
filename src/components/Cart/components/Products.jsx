@@ -64,6 +64,10 @@ async function getProducts(){
     };
 
   return (
+    <>
+    <div className="container">
+
+    
     <div className='flex flex-col justify-center bg-gray-100'>
       <ToastContainer />
       <div className='flex justify-between items-center px-20 py-5'>
@@ -72,11 +76,13 @@ async function getProducts(){
           onClick={toggle}
         ><BsCart/> ({cartItems.length})</button>}
       </div>
+      <div className="container">
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10'>
-        {
+       
+           {
           products.map(product => (
-            <div key={product.id} className='bg-white shadow-md rounded-lg px-5 py-10'>
-              <img src={product.thumbnail} alt={product.title} className='rounded-md h-53 w-60' />
+            <div key={product.id} className='bg-white shadow-md rounded-lg px-2 py-10'>
+              <img src={product.thumbnail} alt={product.title} className='rounded-md h-53 w-58 sm:w-60' />
               <div className='mt-4'>
                 <h1 className='text-lg uppercase font-bold'>{product.title}</h1>
                 <p className='mt-2 text-gray-600 text-sm'>{product.description.slice(0, 100)}...</p>
@@ -126,7 +132,10 @@ async function getProducts(){
           ))
         }
       </div>
+      </div>
       <Cart showModal={showModal} toggle={toggle} />
     </div>
+    </div>
+    </>
   )
 }

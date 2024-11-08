@@ -3,6 +3,7 @@ import axios from "axios"
 import { useState } from "react";
 import FormInput from "../action/FormInput";
 import { BiSearch } from "react-icons/bi";
+// import { useNavigate } from "react-router-dom";
 // import { BsSearch } from "react-icons/bs";
 
 function Search() {
@@ -24,6 +25,7 @@ function Search() {
     }
 
   ]
+  // // useNavigate = Navigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(values);
@@ -32,6 +34,7 @@ function Search() {
       await axios.get('https://backendproject-8m9r.onrender.com/posts',values)
       .then(() =>{
 
+        // Navigate('/Search/Page');
       })
     }
       catch(err){
@@ -45,7 +48,7 @@ function Search() {
   return (
     <>
       <div className="container">
-
+<div className=" text-2xl"> Search Your wishes</div>
         <div className="head">
           <div className="left"></div>
           <div className="left">
@@ -60,8 +63,8 @@ function Search() {
               <div className="invisible">
                  &nbps;
               </div>
-              <button className="mt-5 tracking-wide font-semibold text-gray-100 w-full py-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                <BiSearch/>
+              <button className="btn mt-5 tracking-wide font-semibold text-gray-100 w-full py-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                <BiSearch className="text-black bg-white"/>
                
                 </button>
            

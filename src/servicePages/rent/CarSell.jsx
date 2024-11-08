@@ -4,7 +4,7 @@ function CarSell() {
    <>
    <div className="container">
   
-    <div className="container">
+    <div className="contar">
 <RentalCars/>
     </div>
    </div>

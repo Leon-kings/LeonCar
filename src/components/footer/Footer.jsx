@@ -65,8 +65,9 @@ const Footer = () => {
 						<FooterLink href="#">
 						<BsLinkedin/>AKINGENEYE Leon 
 						</FooterLink>
-						<FooterLink href="#">
-						<BsEnvelope/> leonakingeneye2002@gmail.com 
+						<FooterLink href="#" >
+						<BsEnvelope /> leonakingeneye
+						2002@gmail.com 
 						</FooterLink>
 					</Column>
 				</Row>

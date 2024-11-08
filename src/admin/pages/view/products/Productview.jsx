@@ -100,7 +100,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="container">
       <table className="table">
         <thead>
           <tr>
@@ -123,12 +123,12 @@ function App() {
                 {user.website}
               </td>
               <td>
-                <button className="bg-green-400 p-4" onClick={() => updateUser(user.id)}>
+                <button className="bg-green-400 " onClick={() => updateUser(user.id)}>
                   Update
                 </button>
                </td>
                <td>
-                <button className="bg-red-600 p-4" onClick={() => deleteUser(user.id)}>
+                <button className="bg-red-600 " onClick={() => deleteUser(user.id)}>
                   Delete
                 </button>
              </td>
@@ -141,7 +141,7 @@ function App() {
             <td>
               <InputGroup
                 value={newName}
-                className="p-4"
+               
                 onChange={e => setNewName(e.target.value)}
                 placeholder="Add name here..."
               />
@@ -149,7 +149,7 @@ function App() {
             <td>
               <InputGroup
                 placeholder="Add email here..."
-        className="p-4"
+     
                 value={newEmail}
                 onChange={e => setNewEmail(e.target.value)}
               />
@@ -163,7 +163,7 @@ function App() {
               />
             </td>
             <td>
-              <button className="bg-blue-600 p-4" onClick={addUser}>
+              <button className="bg-blue-600 " onClick={addUser}>
                 Add user
               </button>
             </td>

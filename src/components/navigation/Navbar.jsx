@@ -26,7 +26,6 @@ function Navbar() {
             <li onClick={removeActive}>
               <Link to={'/Service'} className={`${styles.navLink}`}>SERVICES</Link>
             </li>
-        
             <li onClick={removeActive}>
               <Link to={'/NewFeatured'} className={`${styles.navLink}`}>NEW</Link>
             </li>

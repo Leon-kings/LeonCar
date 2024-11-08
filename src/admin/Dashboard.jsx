@@ -7,7 +7,8 @@ import {NavBar} from "./user/navbar/userNav"
 import { Link } from "react-router-dom"
 import {data} from "../assets/data/data"
 import { BiCloset, BiEdit } from "react-icons/bi"
-import Productview from "./pages/view/products/Productview"
+
+import Testimonny from "./pages/view/users/comment/Testimonny"
 function Dashboard() {
   return (
     <>
@@ -76,17 +77,12 @@ function Dashboard() {
             <div className="left">
               <Piechart/>
             </div></div>
+            </div>
 
 <div className="container">
-  <div className="title">
-    <div className="head">
-      <h2 className="text">Product View</h2>
-    </div>
-  </div>
-  <Productview/>
+  <Testimonny/>
 </div>
-
-        </div>
+       
     </div>
     </>
   )
