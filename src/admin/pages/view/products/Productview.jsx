@@ -101,7 +101,8 @@ function App() {
 
   return (
     <div className="container">
-      <table className="table">
+ <div className="main overflow-x-auto">
+ <table className="table">
         <thead>
           <tr>
             <th>Id</th>
@@ -170,6 +171,7 @@ function App() {
           </tr>
         </tfoot>
       </table>
+      </div>
     </div>
   )
 }

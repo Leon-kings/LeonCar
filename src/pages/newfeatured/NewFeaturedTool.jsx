@@ -5,10 +5,13 @@ function NewFeatured() {
 <>
 <div className="container">
   <div className="head">
-    <h2 className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Tempora, praesentium accusamus ex illo harum inventore dignissimos 
-    quidem doloribus hic placeat officiis illum voluptatem esse repellendus
-     repellat! Perferendis error incidunt enim. </h2>
+  <div className="title">
+    NEW FEATURED TOOLS 
+  </div>
+  <h2 className="text">
+    CHECKOUT NEW FEATURED TOOLS
+  </h2>
+  <label htmlFor="text">Choose your Toolkits for affordable price</label>
   </div>
 <Products/>
 

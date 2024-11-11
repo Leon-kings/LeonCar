@@ -3,11 +3,12 @@ import {
   Navbar,
   MobileNav,
   Typography,
-  Button,
+
   IconButton,
   Input,
 } from "@material-tailwind/react";
- 
+import { Link } from "react-router-dom";
+
 export function NavbarWithSearch() {
   const [openNav, setOpenNav] = React.useState(false);
  
@@ -39,9 +40,11 @@ export function NavbarWithSearch() {
           />
         </svg>
         <button className="button">
-        <a href="#" className="flex items-center">
+      <Link to={'/FieldRequest'}>
          Requests
-        </a></button>
+        </Link> 
+        </button>
+       
       </Typography>
       <Typography
         as="li"
@@ -63,9 +66,10 @@ export function NavbarWithSearch() {
             fill="#90A4AE"
           />
         </svg> <button className="button">
-        <a href="/admin/users-browsered" className="flex items-center">
+   <Link to={'/Userview'}>
           Users
-        </a></button>
+          </Link>
+       </button>
       </Typography>
       <Typography
         as="li"
@@ -86,9 +90,10 @@ export function NavbarWithSearch() {
           />
         </svg>
         <button className="button">
-        <a href="/admin/selled-cars" className="flex items-center">
+      <Link to={'/Productview'}>
           Products
-        </a></button>
+          </Link>
+      </button>
       </Typography>
       <Typography
         as="li"
@@ -204,9 +209,7 @@ export function NavbarWithSearch() {
                 </svg>
               </div>
             </div>
-            <Button size="md" className="mt-1 rounded-lg sm:mt-0">
-              Search
-            </Button>
+       
           </div>
         </div>
       </MobileNav>

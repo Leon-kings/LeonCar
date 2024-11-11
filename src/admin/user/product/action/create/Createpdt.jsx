@@ -1,13 +1,13 @@
 // import React from 'react'
 
-const Create = () => {
+const Createpdt = () => {
   return (
     <div>
       <div className="container">
-        <div className="title">CREATE</div>
+        <div className="title">CREATE PRODUCTS PAGE</div>
       </div>
     </div>
   )
 }
 
-export default Create
+export default Createpdt

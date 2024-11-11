@@ -12,7 +12,7 @@ import Brands from "./pages/brands/Brands"
 import Login from "./pages/form/login/Login";
 import Register from "./pages/form/registration/Register"
 import CarSell from "./servicePages/rent/CarSell";
-import FieldTeam from "./servicePages/requestTeam/FieldTeam";
+import FieldTeam from "./admin/pages/view/request/FieldRequest";
 import ToolKit from "./servicePages/tools/ToolKit";
 import FormCarRFental from "./servicePages/rental-form/FormCarRFental";
 import { RentCartProvider } from "./components/Rental/context/cart"
@@ -20,16 +20,17 @@ import { CheepProvider } from "./components/Question/context/cart";
 import { CartProvider } from "./components/Cart/context/cart";
 import { ToolsCartContext } from "./servicePages/tools/context/cart";
 import Dashboard from "./admin/Dashboard"
-          import Users from "./admin/pages/Users"
-          import SellCars from "./admin/pages/SellCars"
+          // import Users from "./admin/pages/Users"
+          // import SellCars from "./admin/pages/SellCars"
           import Create from "./admin/pages/post/Create"
-          import Createuser from "./admin/pages/users/Create-user"
+          import Createuser from "./admin/pages/users/Createuser"
           import Payment from "./servicePages/payment/Payment"
           import CreatePost from "./pages/createContent/CreatePost"
                   import UserDashboard from "./admin/user/UserDashboard"
 import Myprofile from "./admin/pages/my profile/Myprofile";
    import Userview from "./admin/pages/view/users/Userview"
    import Productview from "./admin/pages/view/products/Productview"
+   import FieldRequest from "./admin/pages/view/request/FieldRequest";
 const App = () => {
      return (
 
@@ -57,8 +58,8 @@ const App = () => {
                                         <Route element={<FieldTeam />} path="/Request/ImediateTeamSupport"> </Route>
                                         <Route element={<FormCarRFental />} path='/FormCarRFental'></Route>
                                         {/* admin pages */}
-                                        <Route element={<Users />} path='/admin/users'></Route>
-                                        <Route element={<SellCars />} path='/admin/selled-cars'></Route>
+                                        {/* <Route element={<Users />} path='/admin/users'></Route> */}
+                                        {/* <Route element={<SellCars />} path='/admin/selled-cars'></Route> */}
                                         <Route element={<Create />} path='/admin/create/post'></Route>
                                         <Route element={<Createuser />} path='/admin/create/user'></Route>
                                         {/* user admin pannel pages */}
@@ -68,8 +69,11 @@ const App = () => {
                                         <Route element={<Payment />} path='/Payment/Methods'></Route>
                                         <Route element={<CreatePost />} path='/CreatePost'></Route>
                                         {/* admin pannel */}
-                                        <Route element={<Userview />} path='/user'></Route>
-                                        <Route element={<Productview />} path='/view'></Route>
+                                        <Route element={<Userview />} path='/Userview'></Route>
+                                        <Route element={<Productview />} path='/Productview'></Route>
+                                        {/*  */}
+                                        <Route element={<Createuser />} path='/Create-user'></Route>
+                                        <Route element={<FieldRequest />} path='/FieldRequest'></Route>
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>

@@ -1,13 +1,13 @@
 // import React from 'react'
 
-const Create = () => {
+const Update = () => {
   return (
     <div>
       <div className="container">
-        <div className="title">CREATE</div>
+        <div className="title">UPDATE</div>
       </div>
     </div>
   )
 }
 
-export default Create
+export default Update

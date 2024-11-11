@@ -7,8 +7,9 @@ import {NavBar} from "./user/navbar/userNav"
 import { Link } from "react-router-dom"
 import {data} from "../assets/data/data"
 import { BiCloset, BiEdit } from "react-icons/bi"
-
+import Userview from "./pages/view/users/Userview"
 import Testimonny from "./pages/view/users/comment/Testimonny"
+import Products from "./user/product/Products"
 function Dashboard() {
   return (
     <>
@@ -22,10 +23,10 @@ function Dashboard() {
             <Link to={'/admin/profile'}> <button className="btn p-3 m-2">My Profile</button></Link>
             <Link> <button className="btn p-3 m-2">Payments</button></Link>
             <hr />
-            <Link> <button className="btn p-3 m-2">Users</button></Link>
-            <Link> <button className="btn p-3 m-2">Products</button></Link>
+            <Link to={'/Userview'}> <button className="btn p-3 m-2">Users</button></Link>
+            <Link to={'/Productview'}> <button className="btn p-3 m-2">Products</button></Link>
             <hr />
-            <Link> <button className="btn p-3 m-2">Request</button></Link>
+            <Link to={'/FieldRequest'}> <button className="btn p-3 m-2">Request</button></Link>
             <Link> <button className="btn p-3 m-2">Settins</button></Link>
             <hr />
             <Link> <button className="btn p-3 m-2">Logout</button></Link>
@@ -65,7 +66,11 @@ function Dashboard() {
 </table>
 </div>
 
-
+<div className="container">
+  <div className="content">
+    <Products/>
+  </div>
+</div>
 
             {/* <Matrix/> */}
             <div className="left">
@@ -82,7 +87,7 @@ function Dashboard() {
 <div className="container">
   <Testimonny/>
 </div>
-       
+      <Userview/> 
     </div>
     </>
   )

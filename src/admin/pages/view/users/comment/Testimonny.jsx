@@ -8,6 +8,7 @@ const Testimonny = () => {
     const [values,setValues] = useState({
         email:"",
         testimony:"",
+        name:""
       });
       const Navigate =useNavigate();
       const inputs=[
