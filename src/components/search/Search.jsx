@@ -31,7 +31,7 @@ function Search() {
     console.log(values);
       try{
 
-      await axios.get('https://backendproject-8m9r.onrender.com/posts',values)
+      await axios.get('https://backendproject-8m9r.onrender.com/search',values)
       .then(() =>{
 
         // Navigate('/Search/Page');

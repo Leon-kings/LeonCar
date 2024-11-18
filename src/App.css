@@ -46,6 +46,11 @@
   /* background-attachment: fixed; */
   background-size: cover;
 }
+.location{
+  background-image: url('../src/assets/images/map.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .section{
   border: 2px solid black;
 }

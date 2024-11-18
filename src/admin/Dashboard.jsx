@@ -18,6 +18,8 @@ function Dashboard() {
        <div className="head">
         <NavbarWithSearch/>
        </div>
+       {/*  */}
+       {/*  */}
         <div className="sxleft">
           <div className="menu">
             <Link to={'/admin/profile'}> <button className="btn p-3 m-2">My Profile</button></Link>
@@ -33,15 +35,15 @@ function Dashboard() {
           </div>
         
       </div>
-     
+      {/*  */}
+      {/*  */}
       <div className="xxleft">
-     
-        <div className="container">
+      <div className="container">
           <div className="head">
             <NavBar/>
           </div>
-<div className="main overflow-x-auto">
-    <table className="table">
+        <div className="main overflow-x-auto">
+        <table className="table">
   <tr>
                   <th className='head'>ID</th>
                   <th className='head'>USERNAMES</th>

@@ -42,7 +42,7 @@ const App = () => {
                               <BrowserRouter>
                                    <Navbar />
                                    <Routes>
-                                        <Route element={<Dashboard />} path='/Dashboard'></Route>
+                                        <Route element={<Dashboard />} path='/5Eqi3pEyTJliNa7ANd9GcQN'></Route>
                                         <Route element={<Home />} path='/'></Route>
                                         <Route element={<Services />} path='/Service'></Route>
                                         <Route element={<Contact />} path='/Contact-us'></Route>
