@@ -16,7 +16,7 @@ function Search() {
 
     {
       id: 1,
-      name: "search your cars",
+      name: "search",
       type: "text",
       placeholder: "Place Your Search",
       errorMessage: "Search box must be valid",
