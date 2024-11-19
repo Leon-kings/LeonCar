@@ -1,5 +1,5 @@
 // import React from 'react'
-import { NavbarWithSearch } from "../../components/navbar/NavBar"
+// import { NavbarWithSearch } from "../../components/navbar/NavBar"
 import welcome from "../../../assets/images/welcome.jpg"
 import { Link } from "react-router-dom"
 import UpdateProfile from "./Update"
@@ -8,7 +8,7 @@ const Myprofile = () => {
     <>
     <div className="container">
         <div className="head">
-        <NavbarWithSearch/>
+        {/* <NavbarWithSearch/> */}
       </div>
       <div className="sxleft">
           <div className="menu">
