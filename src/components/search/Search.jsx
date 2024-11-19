@@ -8,12 +8,9 @@ import { BiSearch } from "react-icons/bi";
 
 function Search() {
   const [values, setValues] = useState({
-
     search: "",
-
   });
   const inputs = [
-
     {
       id: 1,
       name: "search",

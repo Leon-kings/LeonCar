@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@blueprintjs/core": "^5.13.1",
+    "@emailjs/browser": "^4.4.1",
     "@headlessui/react": "^2.1.1",
     "@heroicons/react": "^2.1.4",
     "@material-tailwind/react": "^2.1.9",

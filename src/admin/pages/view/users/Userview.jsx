@@ -13,7 +13,7 @@ const AdminView = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('https://fake-json-api.mock.beeceptor.com/users');
+      const response = await axios.get('https://backendproject-8m9r.onrender.com/users');
       setUsers(response.data); // Directly use response.data to set users
     } catch (err) {
       console.error(err.message);
@@ -25,7 +25,7 @@ const AdminView = () => {
   const deleteUser = async (id) => {
     try {
       // Use axios.delete instead of axios.get and remove the method property
-      await axios.delete(`https://fake-json-api.mock.beeceptor.com/users/${id}`);
+      await axios.delete(`https://backendproject-8m9r.onrender.com/users/${id}`);
       
       // Remove the deleted user from the local state
       setUsers(users.filter(user => user.id !== id));
