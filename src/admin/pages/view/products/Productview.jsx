@@ -1,179 +1,105 @@
-import { useEffect, useState } from "react"
-import {
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
+const PostsTable = () => {
+  const [posts, setPosts] = useState([]);
+  const [selectedPost, setSelectedPost] = useState(null);
 
-  InputGroup,
-  Toaster,
-  Position,
-} from "@blueprintjs/core"
-
-const AppToaster = Toaster.create({
-  position: Position.TOP,
-})
-
-function App() {
-  const [users, setUsers] = useState([])
-  const [newName, setNewName] = useState("")
-  const [newEmail, setNewEmail] = useState("")
-  const [newWebsite, setNewWebsite] = useState("")
+  // Error handling for API requests
+  const handleError = (error) => {
+    console.error('Error:', error);
+    // You can also display user-friendly error messages here
+  };
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(json => setUsers(json))
-  }, [])
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get('https://backendproject-8m9r.onrender.com/posts');
+        setPosts(response.data);
+      } catch (error) {
+        handleError(error);
+      }
+    };
 
-  const addUser = () => {
-    const name = newName.trim()
-    const email = newEmail.trim()
-    const website = newWebsite.trim()
-    if (name && email && website) {
-      fetch("https://jsonplaceholder.typicode.com/users", {
-        method: "POST",
-        body: JSON.stringify({
-          name,
-          email,
-          website,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then(response => response.json())
-        .then(data => {
-          setUsers([...users, data])
-          setNewName("")
-          setNewEmail("")
-          setNewWebsite("")
-          AppToaster.show({
-            message: "User added successfully",
-            intent: "success",
-            timeout: 3000,
-          })
-        })
+    fetchPosts();
+  }, []);
+
+  const handleDelete = async (postId) => {
+    try {
+      await axios.delete(`https://backendproject-8m9r.onrender.com/posts/${postId}`);
+      setPosts(posts.filter((post) => post._id !== postId)); // Update local state
+    } catch (error) {
+      handleError(error);
     }
-  }
+  };
 
-  const updateUser = id => {
-    const user = users.find(user => user.id === id)
-
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(user),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then(response => response.json())
-      .then(() => {
-        AppToaster.show({
-          message: "User updated successfully",
-          intent: "success",
-          timeout: 3000,
-        })
-      })
-  }
-
-  const deleteUser = id => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-      method: "DELETE",
-    })
-      .then(response => response.json())
-      .then(() => {
-        setUsers(values => {
-          return values.filter(item => item.id !== id)
-        })
-        AppToaster.show({
-          message: "User deleted successfully",
-          intent: "success",
-          timeout: 3000,
-        })
-      })
-  }
-
-  const onChangeHandler = (id, key, value) => {
-    setUsers(values => {
-      return values.map(item =>
-        item.id === id ? { ...item, [key]: value } : item
-      )
-    })
-  }
+  const handleUpdate = async (updatedPost) => {
+    try {
+      const response = await axios.put(`https://backendproject-8m9r.onrender.com/posts/${updatedPost._id}`, updatedPost);
+      const updatedPosts = posts.map((post) => (post._id === updatedPost._id ? response.data : post));
+      setPosts(updatedPosts);
+      setSelectedPost(null); // Clear selected post after update
+    } catch (error) {
+      handleError(error);
+    }
+  };
 
   return (
-    <div className="container">
- <div className="main overflow-x-auto">
- <table className="table">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Website</th>
-            <th colSpan={2}>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td onChange={value => onChangeHandler(user.id, "email", value)}>
-                {user.email}
-              </td>
-              <td  onChange={value => onChangeHandler(user.id, "website", value)}>
-                {user.website}
-              </td>
-              <td>
-                <button className="bg-green-400 " onClick={() => updateUser(user.id)}>
-                  Update
-                </button>
-               </td>
-               <td>
-                <button className="bg-red-600 " onClick={() => deleteUser(user.id)}>
-                  Delete
-                </button>
-             </td>
+    <div className="container mx-auto">
+      <h1>Posts</h1>
+      {posts.length > 0 ? (
+        <table className="table-auto w-full">
+          <thead>
+            <tr>
+              <th className="px-4 py-2">Title</th>
+              <th className="px-4 py-2">Content</th>
+              {/* Add more post property headers as needed */}
+              <th className="px-4 py-2">Actions</th>
             </tr>
-          ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td></td>
-            <td>
-              <InputGroup
-                value={newName}
-               
-                onChange={e => setNewName(e.target.value)}
-                placeholder="Add name here..."
-              />
-            </td>
-            <td>
-              <InputGroup
-                placeholder="Add email here..."
-     
-                value={newEmail}
-                onChange={e => setNewEmail(e.target.value)}
-              />
-            </td>
-            <td>
-              <InputGroup
-              
-                placeholder="Add website here..."
-                value={newWebsite}
-                onChange={e => setNewWebsite(e.target.value)}
-              />
-            </td>
-            <td>
-              <button className="bg-blue-600 " onClick={addUser}>
-                Add user
-              </button>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
-      </div>
-    </div>
-  )
-}
+          </thead>
+          <tbody>
+            {posts.map((post) => (
+              <tr key={post._id}>
+                <td className="px-4 py-2">{post.title}</td>
+                <td className="px-4 py-2">{post.content.substring(0, 50)}...</td> {/* Truncate content for table display */}
+                {/* Add more post property data cells as needed */}
+                <td className="px-4 py-2">
+                  <button className="bg-red-500 hover:bg-red-700 text-white px-2 py-1 rounded" onClick={() => handleDelete(post._id)}>
+                    Delete
+                  </button>
+                  <button className="bg-green-500 hover:bg-green-700 text-white px-2 py-1 rounded ml-2" onClick={() => setSelectedPost(post)}>
+                    Update
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>No posts found.</p>
+      )}
 
-export default App
+      {selectedPost && (
+        <div className="mt-4">
+          <h2>Update Post</h2>
+          {/* Form for updating post details goes here */}
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            // Extract updated post data from form fields
+            const updatedPost = {
+              // ... updated post data
+            };
+            handleUpdate(updatedPost);
+          }}>
+            {/* Update form fields for title, content, etc. */}
+            <button type="submit" className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
+              Update
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PostsTable;

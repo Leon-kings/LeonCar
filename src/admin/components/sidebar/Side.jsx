@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ShortList from '../shortlist/ShortList'
+import UserManagement from "../../pages/view/users/Userview";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -72,6 +73,7 @@ const Sidebar = () => {
       <div className="flex-grow bg-gray-100 min-h-screen ">
     
        <ShortList/>
+       <UserManagement/>
       </div>
     </div>
   );
