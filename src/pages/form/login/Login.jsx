@@ -8,7 +8,6 @@ const Login =()=>{
   const [values,setValues] = useState({
  
     email:"",
-
     password:"",
   
   });
@@ -48,12 +47,12 @@ const Login =()=>{
             Navigate('/5Eqi3pEyTJliNa7ANd9GcQN');
           }
           try {
-
             await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
             alert('User logged successfully');
             Navigate('/833 103.803C182.209 103');
           } catch (err) {
             console.log(err);
+            // alert(err);
           }
       
       };

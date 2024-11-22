@@ -1,86 +1,16 @@
-
+// import React from 'react'
+import { Link } from "react-router-dom"
 import { useState } from "react";
-import FormInput from "../../../components/action/FormInput"
-import {  Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-
-// useNavigate
-const App = () => {
-  const [values, setValues] = useState({
-
-    email: "",
-    password: "",
-    fullname: "",
-    phone: ""
-
-  });
-  const Navigate = useNavigate()
-  const inputs = [
-    {
-      id: 1,
-      name: "fullname",
-      type: "text",
-      placeholder: "Names",
-      errorMessage: "Names needed ",
-      label: "Your Names",
-      required: true
-    },
-    {
-      id: 2,
-      name: "email",
-      type: "email",
-      placeholder: "email",
-      errorMessage: "email should be valid and should incloude @ symbols",
-      label: "email",
-      required: true
-    },
-    {
-      id: 3,
-      name: "phone",
-      type: "text",
-      placeholder: "+250787944577",
-      errorMessage: "Phone should start with country code +250",
-      label: "email",
-      required: true
-    },
-
-    {
-      id: 4,
-      name: "password",
-      type: "password",
-      placeholder: "password",
-      errorMessage: "password should be 8-12 characters include at least 1 letter and 1 symbol",
-      label: "password",
-      // pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
-      required: true
-    },
-  ];
-  const [isOpen, setIsOpen] = useState(false);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log(values);
-    try {
-      await axios.post('https://backendproject-8m9r.onrender.com/users', values);
-      alert('User Registered successfully');
-      Navigate('/Login');
-    } catch (err) {
-      console.log(err);
-      alert(err);
-    }
-  };
-
-  const onChange = (e) => {
-
-    setValues({ ...values, [e.target.name]: e.target.value });
-
-  }
-  return (
-    <>
-      <div className="container">
-            {/* Sidebar */}
-            <div className="title"></div>
-            <div className="xleft">
-                          <div
+import Book from './component/Book'
+import ExampleSide from '../request/component/ExampleSide'
+const Testimonny = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+        <>
+            <div className="container">
+                <div className="flex">
+                    {/* FieldRequest */}
+                    <div
                         className={`top-0 left-0 h-full bg-gray-800 text-white w-64 z-50 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
                             } transition-transform duration-300 lg:translate-x-0`}
                     >
@@ -197,36 +127,20 @@ const App = () => {
                     >
                         ☰
                     </button>
-      </div>
-      <div className="xleft">
-      <div className=" bg-gray-100 ">
-  
-   <div className="fit">
-            <form onSubmit={handleSubmit} >
-              <div className="head">
-                <button className="p-3">
-                  <h1 className="p-3 text-blue-400">Create User</h1></button>
-              </div>
-              <div className="contain">
-                {inputs.map((input) => (
-                  <FormInput key={input.id} className="p-3"
-                    {...input} value={values[input.name]}
-                    onChange={onChange} />
-                ))}
-                <div className="head">
-                  <button className="btn">Submit</button>
-                  </div>
-              </div>
-            </form>
-          </div>
-       </div>
-  </div>
 
-  </div>   
-    
+                    {/* Main Content */}
+                    <div className="flex-grow bg-gray-100 min-h-screen ">
+                        <Book />
+                        <div className="container">
 
-      
-    </>
-  )
+                            <div className="Lleft">
+                                <ExampleSide />
+                            </div></div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
-export default App;
+
+export default Testimonny

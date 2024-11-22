@@ -9,9 +9,8 @@ const Sidebar = () => {
     <div className="flex">
       {/* Sidebar */}
       <div
-        className={`top-0 left-0 h-full bg-gray-800 text-white w-64 z-50 transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 lg:translate-x-0`}
+        className={`top-0 left-0 h-full bg-gray-800 text-white w-64 z-50 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 lg:translate-x-0`}
       >
         <div className="p-4 text-lg font-bold">LD</div>
         <nav className="mt-4">
@@ -29,7 +28,7 @@ const Sidebar = () => {
                 to="/admin/profile"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-              <button>Profile</button>
+                <button>Profile</button>
               </Link>
             </li>
             <br />
@@ -40,7 +39,7 @@ const Sidebar = () => {
                 to="/Userview"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-              <button>Users</button>
+                <button>Users</button>
               </Link>
             </li>
             <br />
@@ -49,7 +48,7 @@ const Sidebar = () => {
                 to="/Productview"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-             <button>Products</button>
+                <button>Products</button>
               </Link>
             </li>
             <br />
@@ -61,7 +60,7 @@ const Sidebar = () => {
                 to="/admin/create/user"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-               <button>Create User</button>
+                <button>Create User</button>
               </Link>
             </li>
             <br />
@@ -70,7 +69,7 @@ const Sidebar = () => {
                 to="/admin/create/post"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-               <button>Create Posts</button>
+                <button>Create Posts</button>
               </Link>
             </li>
             <br />
@@ -82,36 +81,37 @@ const Sidebar = () => {
                 to="/Request"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-               <button>Requests</button>
+                <button>Requests</button>
               </Link>
             </li>
             <br />
             <li>
               <Link
-                to="/Messages"
+                to="/Testimony"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-               <button>Messages</button>
+                <button>Testimony</button>
               </Link>
             </li>
             <br />
             <hr />
+            <p>VIEW</p>
             <br />
             <li>
               <Link
-                to="/profile"
+                to="/View/Booking"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-               <button>Dashboard</button>
+                <button>Request</button>
               </Link>
             </li>
             <br />
             <li>
               <Link
-                to="/profile"
+                to="/View/Testimony"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-               <button>Dashboard</button>
+                <button>Testimony</button>
               </Link>
             </li>
           </ul>
@@ -128,9 +128,9 @@ const Sidebar = () => {
 
       {/* Main Content */}
       <div className="flex-grow bg-gray-100 min-h-screen ">
-    
-       <ShortList/>
-       <UserManagement/>
+
+        <ShortList />
+        <UserManagement />
       </div>
     </div>
   );

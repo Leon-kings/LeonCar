@@ -199,7 +199,10 @@ a {
   width: 80%;
   float: left;
 }
+.Lleft{
+  float: left;
 
+}
 /* responsiviness */
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 380px) {
@@ -242,6 +245,10 @@ a {
     width: 100%;
   }
 .left{
+  width: 100%;
+  padding: 0.3em;
+}
+.Lleft{
   width: 100%;
   padding: 0.3em;
 }

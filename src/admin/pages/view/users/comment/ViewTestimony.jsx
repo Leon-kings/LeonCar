@@ -1,50 +1,65 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Example from '../request/component/ExampleSide';
+import Example from '../../request/component/ExampleSide';
 
-const UsersTable = () => {
-  const [users, setUsers] = useState([]);
-  const [selectedUser, setSelectedUser] = useState(null);
+const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [editingTestimonial, setEditingTestimonial] = useState(null);
+  const [updatedText, setUpdatedText] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  // Fetch all testimonials
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchTestimonials = async () => {
       try {
-        const response = await axios.get('https://backendproject-8m9r.onrender.com/users');
-        setUsers(response.data);
+        const response = await axios.get('https://backendproject-8m9r.onrender.com/testimony');
+        setTestimonials(response.data);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('Error fetching testimonials:', error);
       }
     };
 
-    fetchUsers();
+    fetchTestimonials();
   }, []);
 
-  const handleDelete = async (userId) => {
+  // Delete a testimonial
+  const deleteTestimonial = async (id) => {
     try {
-      await axios.delete(`https://backendproject-8m9r.onrender.com/users/${userId}`);
-      setUsers(users.filter((user) => user._id !== userId)); // Update local state
+      await axios.delete(`https://backendproject-8m9r.onrender.com/testimony/${id}`);
+      setTestimonials(testimonials.filter((t) => t.id !== id));
     } catch (error) {
-      console.error('Error deleting user:', error);
-      // Handle deletion error (e.g., display an error message)
+      console.error('Error deleting testimonial:', error);
     }
   };
 
-  const handleUpdate = async (updatedUser) => {
+  // Start editing a testimonial
+  const startEditing = (testimonial) => {
+    setEditingTestimonial(testimonial);
+    setUpdatedText(testimonial.text);
+  };
+
+  // Update a testimonial
+  const updateTestimonial = async () => {
     try {
-      const response = await axios.put(`https://backendproject-8m9r.onrender.com/users/${updatedUser._id}`, updatedUser);
-      const updatedUsers = users.map((user) => (user._id === updatedUser._id ? response.data : user));
-      setUsers(updatedUsers);
-      setSelectedUser(null); // Clear selected user after update
+      const updatedTestimonial = {
+        ...editingTestimonial,
+        text: updatedText,
+      };
+      await axios.put(`https://backendproject-8m9r.onrender.com/testimony/${editingTestimonial.id}`, updatedTestimonial);
+      setTestimonials(
+        testimonials.map((t) =>
+          t.id === editingTestimonial.id ? updatedTestimonial : t
+        )
+      );
+      setEditingTestimonial(null);
+      setUpdatedText('');
     } catch (error) {
-      console.error('Error updating user:', error);
-      // Handle update error (e.g., display an error message)
+      console.error('Error updating testimonial:', error);
     }
   };
 
   return (
-    <>
-    <div className="container mx-auto">
+    <div>
     <div className="flex">
       {/* Sidebar */}
       <div
@@ -167,68 +182,45 @@ const UsersTable = () => {
 
       {/* Main Content */}
       <div className="flex-grow bg-gray-100 min-h-screen ">
-
-
-      <h1>Users</h1>
-      {users.length > 0 ? (
-        <table className="table-auto w-full">
-          <thead>
-            <tr>
-              <th className="px-4 py-2">Name</th>
-              <th className="px-4 py-2">Email</th>
-              {/* Add more user property headers as needed */}
-              <th className="px-4 py-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user) => (
-              <tr key={user._id}>
-                <td className="px-4 py-2">{user.name}</td>
-                <td className="px-4 py-2">{user.email}</td>
-                {/* Add more user property data cells as needed */}
-                <td className="px-4 py-2">
-                  <button className="bg-red-500 hover:bg-red-700 text-white px-2 py-1 rounded" onClick={() => handleDelete(user._id)}>
+      <h1>Testimonials</h1>
+      {testimonials.length > 0 ? (
+        <ul>
+          {testimonials.map((testimonial) => (
+            <li key={testimonial.id}>
+              {editingTestimonial?.id === testimonial.id ? (
+                <div>
+                  <textarea
+                    value={updatedText}
+                    onChange={(e) => setUpdatedText(e.target.value)}
+                  />
+                  <button onClick={updateTestimonial}>Save</button>
+                  <button onClick={() => setEditingTestimonial(null)}>
+                    Cancel
+                  </button>
+                </div>
+              ) : (
+                <div>
+                  <p>{testimonial.text}</p>
+                  <button onClick={() => startEditing(testimonial)}>Edit</button>
+                  <button onClick={() => deleteTestimonial(testimonial.id)}>
                     Delete
                   </button>
-                  <button className="bg-green-500 hover:bg-green-700 text-white px-2 py-1 rounded ml-2" onClick={() => setSelectedUser(user)}>
-                    Update
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
       ) : (
-        <p className='text-red-500'>No users found.</p>
+        <p>No testimonials found.</p>
       )}
-
-      {selectedUser && (
-        <div className="mt-4">
-          <h2>Update User</h2>
-          {/* Form for updating user details goes here */}
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            // Extract updated user data from form fields
-            const updatedUser = {
-              // ... updated user data
-            };
-            handleUpdate(updatedUser);
-          }}>
-            {/* Update form fields for name, email, etc. */}
-            <button type="submit" className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
-              Update
-            </button>
-          </form>
-        </div>
-      )}
-      <div className="container">
-        <Example/>
-      </div>
-      </div>
+        <div className="container">
+      <Example/>
     </div>
     </div>
-    </>
+  
+    </div>
+    </div>
   );
 };
 
-export default UsersTable;
+export default Testimonials;

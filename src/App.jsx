@@ -31,6 +31,9 @@ import Myprofile from "./admin/pages/my profile/Myprofile";
    import Userview from "./admin/pages/view/users/Userview"
    import Productview from "./admin/pages/view/products/Productview"
    import FieldRequest from "./admin/pages/view/request/FieldRequest";
+import Testimonny from "./admin/pages/view/users/comment/Testimonny";
+import ViewTestimonny from "./admin/pages/view/users/comment/ViewTestimony"
+import Booking from './admin/pages/view/booking/Booking'
 const App = () => {
      return (
 
@@ -58,8 +61,6 @@ const App = () => {
                                         <Route element={<FieldTeam />} path="/Request/ImediateTeamSupport"> </Route>
                                         <Route element={<FormCarRFental />} path='/FormCarRFental'></Route>
                                         {/* admin pages */}
-                                        {/* <Route element={<Users />} path='/admin/users'></Route> */}
-                                        {/* <Route element={<SellCars />} path='/admin/selled-cars'></Route> */}
                                         <Route element={<Create />} path='/admin/create/post'></Route>
                                         <Route element={<Createuser />} path='/admin/create/user'></Route>
                                         {/* user admin pannel pages */}
@@ -74,6 +75,12 @@ const App = () => {
                                         {/*  */}
                                         <Route element={<Createuser />} path='/Create-user'></Route>
                                         <Route element={<FieldRequest />} path='/Request'></Route>
+                                        {/*  */}
+                                        <Route element={<Testimonny />} path='/Testimony'></Route>
+                                        <Route element={<ViewTestimonny />} path='/View/Testimony'></Route>
+                                        {/*  */}
+                                        <Route element={<Booking />} path='/View/Booking'></Route>
+                                        {/*  */}
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>
