@@ -39,24 +39,6 @@ const Login =()=>{
 
 // fetching data from database
          // handleSubmit
-      //    const handleSubmit = async (e) => {
-      //     e.preventDefault();
-      //     console.log(values);
-      //     if(values.email==='admin@gmail.com' && values.password==='admin'){
-      //       alert('Welcome LD');
-      //       Navigate('/5Eqi3pEyTJliNa7ANd9GcQN');
-      //     }
-      //     try {
-      //       await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
-      //       alert('User logged successfully');
-      //       Navigate('/833 103.803C182.209 103');
-      //     } catch (err) {
-      //       console.log(err);
-      //       // alert(err);
-      //     }
-      
-      // };
-      // const [error, setError] = useState('');
 
 const handleSubmit = async (e) => {
   e.preventDefault();
