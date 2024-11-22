@@ -1,8 +1,9 @@
 
 import { useState } from "react";
 import FormInput from "../../../components/action/FormInput"
-import {  useNavigate } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+
 // useNavigate
 const App = () => {
   const [values, setValues] = useState({
@@ -54,17 +55,17 @@ const App = () => {
       required: true
     },
   ];
-
+  const [isOpen, setIsOpen] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(values);
     try {
       await axios.post('https://backendproject-8m9r.onrender.com/users', values);
       alert('User Registered successfully');
-     
-      Navigate('/admin/users');
+      Navigate('/Login');
     } catch (err) {
       console.log(err);
+      alert(err);
     }
   };
 
@@ -76,14 +77,134 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <div className="left"></div>
-        <div className="left">
+            {/* Sidebar */}
+            <div className="title"></div>
+            <div className="xleft">
+            <div
+        className={`top-0 left-0 h-full bg-gray-800 text-white w-64 z-50 transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 lg:translate-x-0`}
+      >
+        <div className="p-4 text-lg font-bold">LD</div>
+        <nav className="mt-4">
+          <ul>
+            <li>
+              <Link
+                to="/5Eqi3pEyTJliNa7ANd9GcQN"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              > <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/admin/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+              <button>Profile</button>
+              </Link>
+            </li>
+            <br />
+            <hr />
+            <br />
+            <li>
+              <Link
+                to="/Userview"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+              <button>Users</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/Productview"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+             <button>Products</button>
+              </Link>
+            </li>
+            <br />
+            <hr />
+            <p>USERS</p>
+            <br />
+            <li>
+              <Link
+                to="/admin/create/user"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Create User</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/admin/create/post"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Create Posts</button>
+              </Link>
+            </li>
+            <br />
+            <hr />
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <hr />
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-          <div className="app">
+      {/* Hamburger Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed top-4 left-4 z-50 lg:hidden p-2 bg-gray-800 text-white rounded"
+      >
+        ☰
+      </button>
+      </div>
+      <div className="xleft">
+      <div className=" bg-gray-100 ">
+  
+   <div className="fit">
             <form onSubmit={handleSubmit} >
               <div className="head">
                 <button className="p-3">
-                  <h1 className="p-3">Create</h1></button>
+                  <h1 className="p-3 text-blue-400">Create User</h1></button>
               </div>
               <div className="contain">
                 {inputs.map((input) => (
@@ -97,9 +218,13 @@ const App = () => {
               </div>
             </form>
           </div>
-        </div>
+       </div>
+  </div>
 
-      </div>
+  </div>   
+    
+
+      
     </>
   )
 }

@@ -51,7 +51,7 @@ const Login =()=>{
 
             await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
             alert('User logged successfully');
-            Navigate('/Dashboard/user');
+            Navigate('/833 103.803C182.209 103');
           } catch (err) {
             console.log(err);
           }

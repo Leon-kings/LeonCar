@@ -63,8 +63,8 @@ const App = () => {
                                         <Route element={<Create />} path='/admin/create/post'></Route>
                                         <Route element={<Createuser />} path='/admin/create/user'></Route>
                                         {/* user admin pannel pages */}
-                                        <Route element={<Myprofile />} path='admin/profile'></Route>
-                                        <Route element={<UserDashboard />} path='/Dashboard/user'></Route>
+                                        <Route element={<Myprofile />} path='/admin/profile'></Route>
+                                        <Route element={<UserDashboard />} path='/833 103.803C182.209 103'></Route>
                                         {/* Payment methods */}
                                         <Route element={<Payment />} path='/Payment/Methods'></Route>
                                         <Route element={<CreatePost />} path='/CreatePost'></Route>
@@ -73,7 +73,7 @@ const App = () => {
                                         <Route element={<Productview />} path='/Productview'></Route>
                                         {/*  */}
                                         <Route element={<Createuser />} path='/Create-user'></Route>
-                                        <Route element={<FieldRequest />} path='/FieldRequest'></Route>
+                                        <Route element={<FieldRequest />} path='/Request'></Route>
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>

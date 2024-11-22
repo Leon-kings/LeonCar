@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom"
 import axios from "axios";
 import { useState } from "react";
 import FormInput from "../../../../../components/action/FormInput";
-useState
+
 const Testimonny = () => {
     const [values,setValues] = useState({
         email:"",

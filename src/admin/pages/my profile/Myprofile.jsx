@@ -1,31 +1,134 @@
-// import React from 'react'
-// import { NavbarWithSearch } from "../../components/navbar/NavBar"
-import welcome from "../../../assets/images/welcome.jpg"
-import { Link } from "react-router-dom"
-import UpdateProfile from "./Update"
-const Myprofile = () => {
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import welcome from '../../../assets/images/welcome.jpg'
+import Update from '../my profile/Update'
+const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <>
-    <div className="container">
-        <div className="head">
-        {/* <NavbarWithSearch/> */}
-      </div>
-      <div className="sxleft">
-          <div className="menu">
-            <Link to={'/Dashboard'}> <button className="btn p-3 m-2">Dashboard</button></Link>
-            <Link> <button className="btn p-3 m-2">Payments</button></Link>
+    <><div className="title"></div>
+    <div className="flex">
+      {/* Sidebar */}
+      
+      <div
+        className={`top-0 left-0 h-full bg-gray-800 text-white w-64 z-50 transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 lg:translate-x-0`}
+      >
+        <div className="p-4 text-lg font-bold">LD</div>
+        <nav className="mt-4">
+          <ul>
+            <li>
+              <Link
+                to="/5Eqi3pEyTJliNa7ANd9GcQN"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              > <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/admin/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+              <button>Profile</button>
+              </Link>
+            </li>
+            <br />
             <hr />
-            <Link> <button className="btn p-3 m-2">Users</button></Link>
-            <Link> <button className="btn p-3 m-2">Products</button></Link>
+            <br />
+            <li>
+              <Link
+                to="/"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+              <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/settings"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+             <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
             <hr />
-            <Link> <button className="btn p-3 m-2">Request</button></Link>
-            <Link> <button className="btn p-3 m-2">Settins</button></Link>
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
             <hr />
-            <Link> <button className="btn p-3 m-2">Logout</button></Link>
-          </div>
-        
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <hr />
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
 
+      {/* Hamburger Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed top-4 left-4 z-50 lg:hidden p-2 bg-gray-800 text-white rounded"
+      >
+        ☰
+      </button>
+
+      {/* Main Content */}
+      <div className="flex-grow bg-gray-100 min-h-screen ">
+    
       <div className="left">
         <div className="">
             <div className="img">
@@ -46,12 +149,16 @@ const Myprofile = () => {
                   </div>
       </div>
       <div className="left">
-        <UpdateProfile/>
+        <div className="container">
+          <Update/>
+        </div>
+      </div>
       </div>
     </div>
     </>
-    
-  )
-}
+  );
+};
 
-export default Myprofile
+export default Sidebar;
+
+

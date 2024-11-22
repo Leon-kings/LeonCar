@@ -13,48 +13,105 @@ const Sidebar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 lg:translate-x-0`}
       >
-        <div className="p-4 text-lg font-bold">Responsive Sidebar</div>
+        <div className="p-4 text-lg font-bold">LD</div>
         <nav className="mt-4">
           <ul>
             <li>
               <Link
-                to="/"
-                className="block px-4 py-2 hover:bg-gray-700 rounded"
-              >
-                Dashboard
+                to="/5Eqi3pEyTJliNa7ANd9GcQN"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              > <button>Dashboard</button>
               </Link>
             </li>
+            <br />
             <li>
               <Link
-                to="/"
-                className="block px-4 py-2 hover:bg-gray-700 rounded"
+                to="/admin/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-                Dashboard
+              <button>Profile</button>
               </Link>
             </li>
-
+            <br />
+            <hr />
+            <br />
             <li>
               <Link
-                to="/"
-                className="block px-4 py-2 hover:bg-gray-700 rounded"
+                to="/Userview"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-                Dashboard
+              <button>Users</button>
               </Link>
             </li>
+            <br />
             <li>
               <Link
-                to="/settings"
-                className="block px-4 py-2 hover:bg-gray-700 rounded"
+                to="/Productview"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-                Settings
+             <button>Products</button>
               </Link>
             </li>
+            <br />
+            <hr />
+            <p>CREATES</p>
+            <br />
+            <li>
+              <Link
+                to="/admin/create/user"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Create User</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/admin/create/post"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Create Posts</button>
+              </Link>
+            </li>
+            <br />
+            <hr />
+            <p>NOTIFY</p>
+            <br />
+            <li>
+              <Link
+                to="/Request"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Requests</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/Messages"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Messages</button>
+              </Link>
+            </li>
+            <br />
+            <hr />
+            <br />
             <li>
               <Link
                 to="/profile"
-                className="block px-4 py-2 hover:bg-gray-700 rounded"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
-                Profile
+               <button>Dashboard</button>
+              </Link>
+            </li>
+            <br />
+            <li>
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
+              >
+               <button>Dashboard</button>
               </Link>
             </li>
           </ul>
