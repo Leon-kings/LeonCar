@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
         ))}
         <div className="head">
         <button className="button">Submit</button>
-        <p>If you don`t have an account got <a ><Link to="/Register"><b><button> Register</button></b> </Link> </a></p>
+        <p>If you don`t have an account got <a ><Link to="/Register"><b><button className="p-3"> Register</button></b> </Link> </a></p>
         </div>
         </div>
       
