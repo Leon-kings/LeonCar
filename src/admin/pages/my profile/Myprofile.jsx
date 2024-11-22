@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import welcome from '../../../assets/images/welcome.jpg'
 import Update from '../my profile/Update'
+import Example from "../view/request/component/Example";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -130,30 +131,32 @@ const Sidebar = () => {
                     {/* Main Content */}
                     <div className="flex-grow bg-gray-100 min-h-screen ">
     
-      <div className="left">
-        <div className="">
-            <div className="img">
-    
-                  </div>
-              <div className="names">
-              <img
-                    alt="Prof"
-                    src={welcome}
-                    className="h-40 w-52 rounded-full mx-14"
-                  />
-                <Link> <h2 className="text-center text-green-400">Admin</h2></Link>
-                <h2 className="text-center text-green-600">Kigali , Rwanda</h2>
-                <Link><button type="button" className="button">Update Bio</button> </Link>
+                <div className="left">
+                    <div className="">
+                        <div className="img">
                 
-                </div>    
-                  
-                  </div>
-      </div>
+                            </div>
+                        <div className="names">
+                        <img
+                                alt="Prof"
+                                src={welcome}
+                                className="h-40 w-52 rounded-full mx-14"
+                            />
+                            <Link> <h2 className="text-center text-green-400">Admin</h2></Link>
+                            <h2 className="text-center text-green-600">Kigali , Rwanda</h2>
+                            <Link><button type="button" className="button">Update Bio</button> </Link>
+                            
+                            </div>    
+                            
+                            </div>
+                </div>
       <div className="left">
         <div className="container">
           <Update/>
+         
         </div>
-      </div>
+      </div> 
+      <Example/>
       </div>
     </div>
     </>
