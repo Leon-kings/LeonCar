@@ -95,7 +95,7 @@ function Home() {
                 <div className="box">
                   <div className="text-center">
                     <label htmlFor="icons" className="text-black hover:text-lime-400">
-                      <BsCart />
+                      <BsCart className="icons" />
                     </label>
                     <h3 className="head text-center hover:text-red-500">BUY DEAL</h3>
                   </div>
@@ -113,7 +113,7 @@ function Home() {
                   <div className="box">
                     <div className="text-center">
                       <label htmlFor="icons" className="text-black hover:text-lime-400">
-                        <BsClock />
+                        <BsClock className="icons"/>
                       </label>
                       <h3 className="head text-center hover:text-red-500">RENT DEAL</h3>
                     </div>
@@ -130,7 +130,7 @@ function Home() {
                   <div className="box">
                     <div className="text-center">
                       <label htmlFor="icons" className="text-black hover:text-lime-400">
-                        <BsTools />
+                        <BsTools className="icons"/>
                       </label>
                       <h3 className="head text-center hover:text-red-500">TOOLKIT BOX</h3>
                     </div>
@@ -165,7 +165,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head hover:first:invisible hover:after:visible ">
-                  <BsCart4 />
+                  <BsCart4 className="icons"/>
                 </div>
                 <h3 className="text text-black">Buy a Car</h3>
               </div>
@@ -174,7 +174,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsTools />
+                  <BsTools className="icons"/>
                 </div>
                 <h3 className="text text-black">Maintenance ToolKits</h3>
               </div>
@@ -183,7 +183,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsPeople />
+                  <BsPeople className="icons"/>
                 </div>
                 <h3 className="text text-black">Maintenance Team</h3>
               </div>
@@ -191,7 +191,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsClock />
+                  <BsClock className="icons"/>
                 </div>
                 <h3 className="text text-black">Rent Car</h3>
               </div>
@@ -199,7 +199,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsWallet2 />
+                  <BsWallet2 className="icons"/>
                 </div>
                 <h3 className="text text-black">Maintenance Tyres</h3>
               </div>
@@ -207,7 +207,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsListCheck />
+                  <BsListCheck className="icons"/>
                 </div>
                 <h3 className="text text-black">Make Your Order</h3>
               </div>

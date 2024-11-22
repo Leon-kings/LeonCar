@@ -22,51 +22,51 @@ const Footer = () => {
 					<Column>
 						<Heading>About Us</Heading>
 						<FooterLink href="#">
-							<BsQrCode/> LD
+							<BsQrCode className='icons'/> LD
 						</FooterLink>
 					
 					</Column>
 					<Column>
 						<Heading>Services</Heading>
 						<FooterLink href="#">
-						<Link to={'/Services/SellCars'}> <BsCart2/>	Buy a Cars</Link>
+						<Link to={'/Services/SellCars'}> <BsCart2 className='icons'/>	Buy a Cars</Link>
 						</FooterLink>
 						<FooterLink href="#">
-						<BsTools/>	Maintainance Tools
+						<BsTools className='icons'/>	Maintainance Tools
 						</FooterLink>
 						<FooterLink href="#">
-						<BsPeople/>	Maintainance Team
+						<BsPeople className='icons'/>	Maintainance Team
 						</FooterLink>
 						<FooterLink href="#">
-						<BsDatabaseCheck/>	Training
+						<BsDatabaseCheck className='icons'/>	Training
 						</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Contact Us</Heading>
 						<FooterLink href="#">
-							<BsPhoneVibrate/>+250787944577
+							<BsPhoneVibrate className='icons'/>+250787944577
 						</FooterLink>
 						<FooterLink href="#">
-						<BsPhoneVibrate/>+250727556145
+						<BsPhoneVibrate className='icons'/>+250727556145
 						</FooterLink>
 						<FooterLink href="#">
-						<BsWhatsapp/>+250787944577
+						<BsWhatsapp className='icons'/>+250787944577
 						</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Social Media</Heading>
 
 						<FooterLink href="#">
-						<BsWhatsapp/>+250787944577
+						<BsWhatsapp className='icons'/>+250787944577
 						</FooterLink>
 						<FooterLink href="#">
-						<BsInstagram/>AKINGENEYE Leon 
+						<BsInstagram className='icons'/>AKINGENEYE Leon 
 						</FooterLink>
 						<FooterLink href="#">
-						<BsLinkedin/>AKINGENEYE Leon 
+						<BsLinkedin className='icons'/>AKINGENEYE Leon 
 						</FooterLink>
 						<FooterLink href="#" >
-						<BsEnvelope /> leonakingeneye
+						<BsEnvelope className='icons'/> leonakingeneye
 						2002@gmail.com 
 						</FooterLink>
 					</Column>

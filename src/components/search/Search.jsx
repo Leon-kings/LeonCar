@@ -61,7 +61,7 @@ function Search() {
                  &nbps;
               </div>
               <button className="btn mt-5 tracking-wide font-semibold text-gray-100 w-full py-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                <BiSearch className="text-black bg-white"/>
+                <BiSearch className="icons text-black bg-white"/>
                
                 </button>
            

@@ -70,7 +70,7 @@ async function getProducts(){
         <h1 className='text-2xl uppercase font-bold mt-10 text-center mb-10'>New Featured Rental Cars</h1>
         {!showModal && <button className='px-4 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700'
           onClick={toggle}
-        ><BsCart/> ({cartItems.length})</button>}
+        ><BsCart className='icons'/> ({cartItems.length})</button>}
       </div>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10'>
         {
