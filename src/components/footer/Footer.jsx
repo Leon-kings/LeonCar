@@ -16,7 +16,7 @@ const Footer = () => {
 	return (
 		<div className="container">
 		<Box>
-<p id="invisible">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit error, quasi sint illum eius facere, possimus expedita repellat incidunt quo ipsum suscipit quia eos cum itaque perferendis vero perspiciatis harum!Lorem</p>
+<div className="title"></div>
 			<FooterContainer>
 				<Row>
 					<Column>

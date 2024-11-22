@@ -29,15 +29,15 @@ function Home() {
           <div className="backImage">
             <div className="front">
               {/* space to fit a car */}
-          <p className="title"></p>
-          <p className="title"></p>
-          {/* space to fit a car ends*/}
+              <p className="title"></p>
+              <p className="title"></p>
+              {/* space to fit a car ends*/}
               <h2 className="title text-center ">GET YOUR DESIRED CAR IN RESONABLE PRICE</h2>
 
               <h4 className="title text-center">
-                 Leon is happy to serve you Your favourate Cars , 
-                 Choose The Best Cars You want and Your repairment Kits. 
-                 </h4>
+                Leon is happy to serve you Your favourate Cars ,
+                Choose The Best Cars You want and Your repairment Kits.
+              </h4>
               <div className="stitle">
                 <Link to={'/contact'}>
                   <button className="button">Contact us</button>
@@ -58,7 +58,7 @@ function Home() {
           <div className="container *:p-0">
             {/* heading */}
             <div className="title">
-            <h2 className="text-green-300">Search Your Cars or ToolKits Using search Box</h2>
+              <h2 className="text-green-300">Search Your Cars or ToolKits Using search Box</h2>
             </div>
             <div className="head">
               <Search />
@@ -66,28 +66,28 @@ function Home() {
           </div>
           <br />
           <hr />
-        <br />
+          <br />
         </div>
         <br />
-       
+
         {/* Search space ends*/}
         {/*  */}
         {/*  */}
         {/* Main Services starts */}
         <div className="container">
           <div className="container">
-          <div className="title">
+            <div className="title">
               <h2 className="text">Our Services</h2>
             </div>
             <div className="block">
               {/* space btn line and content */}
               <div className="head">
-              <h2 className="hidden text px-2 py-2 text-black">
-                Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Ad, beatae! Esse sed maxime unde,
-                eius quae quis nostrum officiis alias odit quia harum
-                natus animi ipsa, saepe dolor deserunt ab!</h2>
-                </div>
+                <h2 className="hidden text px-2 py-2 text-black">
+                  Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit. Ad, beatae! Esse sed maxime unde,
+                  eius quae quis nostrum officiis alias odit quia harum
+                  natus animi ipsa, saepe dolor deserunt ab!</h2>
+              </div>
             </div>
             {/* content of services */}
             <div className="left">
@@ -100,8 +100,8 @@ function Home() {
                     <h3 className="head text-center hover:text-red-500">BUY DEAL</h3>
                   </div>
                   <div className="head">
-                   You Visit Our Website and Choose Your Favourite Car and Follow Instruction and 
-                   You will get Your Product in 5 to 7 days.For more information You can call our customer care  
+                    You Visit Our Website and Choose Your Favourite Car and Follow Instruction and
+                    You will get Your Product in 5 to 7 days.For more information You can call our customer care
                   </div>
                 </div>
               </div>
@@ -113,14 +113,14 @@ function Home() {
                   <div className="box">
                     <div className="text-center">
                       <label htmlFor="icons" className="text-black hover:text-lime-400">
-                        <BsClock className="icons"/>
+                        <BsClock className="icons" />
                       </label>
                       <h3 className="head text-center hover:text-red-500">RENT DEAL</h3>
                     </div>
                     <div className="head">
-                    You Visit Our Website and Choose Your Favourite Car and Follow Instruction to Rent 
-                    Our cars and Provide All Requirement and Get Your Car.Call us for More inquirement about Documentation
-                    
+                      You Visit Our Website and Choose Your Favourite Car and Follow Instruction to Rent
+                      Our cars and Provide All Requirement and Get Your Car.Call us for More inquirement about Documentation
+
                     </div>
                   </div>
                 </div>
@@ -130,13 +130,13 @@ function Home() {
                   <div className="box">
                     <div className="text-center">
                       <label htmlFor="icons" className="text-black hover:text-lime-400">
-                        <BsTools className="icons"/>
+                        <BsTools className="icons" />
                       </label>
                       <h3 className="head text-center hover:text-red-500">TOOLKIT BOX</h3>
                     </div>
                     <div className="head">
-                    You Visit Our Website and Choose Your Favourite ToolKits and Follow Instruction and 
-                    You will get Your Product in 2 to 7 days.For more information You can call our customer care 
+                      You Visit Our Website and Choose Your Favourite ToolKits and Follow Instruction and
+                      You will get Your Product in 2 to 7 days.For more information You can call our customer care
                     </div>
                   </div>
                 </div>
@@ -147,25 +147,25 @@ function Home() {
           <br />
           <br />
           <hr />
-        <br />
-        {/* second part of services we provide */}
-        <div className="block">
-              {/* space btn line and content */}
-              <div className="head">
+          <br />
+          {/* second part of services we provide */}
+          <div className="block">
+            {/* space btn line and content */}
+            <div className="head">
               <h2 className="hidden text px-2 py-2 text-black">
                 Lorem ipsum dolor sit amet consectetur,
                 adipisicing elit. Ad, beatae! Esse sed maxime unde,
                 eius quae quis nostrum officiis alias odit quia harum
                 natus animi ipsa, saepe dolor deserunt ab!</h2>
-                </div>
             </div>
+          </div>
           {/* heading ends */}
           {/* 2 part starts */}
           <div className="container">
             <div className="left">
               <div className="block">
                 <div className="head hover:first:invisible hover:after:visible ">
-                  <BsCart4 className="icons"/>
+                  <BsCart4 className="icons" />
                 </div>
                 <h3 className="text text-black">Buy a Car</h3>
               </div>
@@ -174,7 +174,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsTools className="icons"/>
+                  <BsTools className="icons" />
                 </div>
                 <h3 className="text text-black">Maintenance ToolKits</h3>
               </div>
@@ -183,7 +183,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsPeople className="icons"/>
+                  <BsPeople className="icons" />
                 </div>
                 <h3 className="text text-black">Maintenance Team</h3>
               </div>
@@ -191,7 +191,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsClock className="icons"/>
+                  <BsClock className="icons" />
                 </div>
                 <h3 className="text text-black">Rent Car</h3>
               </div>
@@ -199,7 +199,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsWallet2 className="icons"/>
+                  <BsWallet2 className="icons" />
                 </div>
                 <h3 className="text text-black">Maintenance Tyres</h3>
               </div>
@@ -207,7 +207,7 @@ function Home() {
             <div className="left">
               <div className="block">
                 <div className="head">
-                  <BsListCheck className="icons"/>
+                  <BsListCheck className="icons" />
                 </div>
                 <h3 className="text text-black">Make Your Order</h3>
               </div>
@@ -218,19 +218,19 @@ function Home() {
         {/* Main Services ends */}
         {/*  */}
         {/*  */}
-        <div className="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Doloribus, id! Suscipit ex voluptatibus, alias qui asperiores mollitia corporis 
-          accusamus at eius fuga voluptas quaerat excepturi repudiandae, atque magni adipisci 
+        <div className="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus, id! Suscipit ex voluptatibus, alias qui asperiores mollitia corporis
+          accusamus at eius fuga voluptas quaerat excepturi repudiandae, atque magni adipisci
           reiciendis!</div>
         <hr />
 
-       {/* Slide block where we show latest products we have in arrays */}
+        {/* Slide block where we show latest products we have in arrays */}
         {/* Slider Starts */}
         <div className="container">
           <div className="container">
             <div className="title">
               NEW FEATURED PRODUCTS
-              </div>
+            </div>
             <Slide />
           </div>
           {/* slider for new featured ends */}
@@ -241,31 +241,31 @@ function Home() {
           </div>
           {/* TOOLKITS */}
           {/* ToolKits slide starts */}
-          
+
           <div className="container">
-        <div className="title">
-         NEW FEATURED TOOLKITS
-        </div>
+            <div className="title">
+              NEW FEATURED TOOLKITS
+            </div>
             <SlideToolKit />
           </div>
         </div>
         {/* Slider toolkits ends */}
         {/*  */}
         {/*  */}
-      <div className="title">
-        <hr />
-      </div>
+        <div className="title">
+          <hr />
+        </div>
         {/* Branding sites starts*/}
         <div className="container">
           <div className="brands">
             <div className="title">
-                CAR BRANDS WE HAVE IN STOCK
+              CAR BRANDS WE HAVE IN STOCK
             </div>
-              <div className="head">
-                <h2 className="text">
-                  Choose Your Favourite Branded Car as You can
-                </h2>
-              </div>
+            <div className="head">
+              <h2 className="text">
+                Choose Your Favourite Branded Car as You can
+              </h2>
+            </div>
             <div className="container">
               <div className="head">
                 <Company />
@@ -276,19 +276,19 @@ function Home() {
         {/* Branding sites ends*/}
         {/*  */}
         {/*  */}
-       <div className="title">
-        <hr />
-       </div>
-       {/*  */}
-       {/* NEW FEATURED CARS */}
+        <div className="title">
+          <hr />
+        </div>
+        {/*  */}
+        {/* NEW FEATURED CARS */}
         {/* Featured New cars starts*/}
         <div className="container">
           <div className="backCar">
             {/* title */}
             <div className="title">CHECKOUT NEW FEATURED CARS AVAILABLE IN STOCK</div>
-            
-            <h3 className="text">We Have New Featured Cars , Be The 1 <sup>st</sup> To Buy Yours Now . 
-            We have Limitted Stock Due To much Orders and also Due to Demands and Best Qualited Product We Serve</h3>
+
+            <h3 className="text">We Have New Featured Cars , Be The 1 <sup>st</sup> To Buy Yours Now .
+              We have Limitted Stock Due To much Orders and also Due to Demands and Best Qualited Product We Serve</h3>
           </div>
           <App />
         </div>
@@ -298,19 +298,19 @@ function Home() {
         <div className="title">
           <hr />
         </div>
-       {/*  */}
-       {/*  */}
-       {/* NEW TOOLKITS FEATURED */}
+        {/*  */}
+        {/*  */}
+        {/* NEW TOOLKITS FEATURED */}
         {/* Featured New Toolkits starts*/}
 
         <div className="container">
           <div className="backCar">
             {/* heading */}
             <div className="title">
-            CHECKOUT NEW FEATURED TOOLKITS AVAILABLE IN STOCK
+              CHECKOUT NEW FEATURED TOOLKITS AVAILABLE IN STOCK
             </div>
-            <h3 className="text">We Have New Featured Toolkits , Be The 1 <sup>st</sup> To Buy Yours Now . 
-            We have Limitted Stock Due To much Orders and also Due to Demands and Best Qualited Product We Serve</h3>
+            <h3 className="text">We Have New Featured Toolkits , Be The 1 <sup>st</sup> To Buy Yours Now .
+              We have Limitted Stock Due To much Orders and also Due to Demands and Best Qualited Product We Serve</h3>
           </div>
           <div className="container">
             <div className="head">
@@ -326,16 +326,16 @@ function Home() {
         </div>
         {/*  */}
         {/*  */}
-              {/* NEW FEATURED RENTAL CARS */}
+        {/* NEW FEATURED RENTAL CARS */}
         {/* Rental Cars */}
         {/* Featured New Rent Cars start*/}
         <div className="container">
           <div className="backCar">
             <div className="title">
-            CHECKOUT NEW FEATURED RENTAL CARS AVAILABLE IN STOCK
+              CHECKOUT NEW FEATURED RENTAL CARS AVAILABLE IN STOCK
             </div>
-            <h3 className="text">We Have New Featured Rental Cars , Be The 1 <sup>st</sup> To Book Yours Now . 
-            We have Limitted Stock Due To much Orders and also Due to Demands and Best Qualited Product We Serve</h3>
+            <h3 className="text">We Have New Featured Rental Cars , Be The 1 <sup>st</sup> To Book Yours Now .
+              We have Limitted Stock Due To much Orders and also Due to Demands and Best Qualited Product We Serve</h3>
           </div>
           <div className="container">
             <div className="head">
@@ -372,12 +372,12 @@ function Home() {
 
         {/*  */}
         {/*  */}
-      <div className="title">
-        <hr />
-      </div>
-       {/*  */}
-       {/*  */}
-       {/* TESTIMONY PARTS */}
+        <div className="title">
+          <hr />
+        </div>
+        {/*  */}
+        {/*  */}
+        {/* TESTIMONY PARTS */}
         {/* testimony part start*/}
         <div className="container">
           <div className="container">
@@ -387,15 +387,15 @@ function Home() {
           </div>
         </div>
         {/* Featured testimony part ends*/}
-            {/*  */}
-            {/*  */}
-            <div className="title">
-              <hr />
-            </div>
-            {/*  */}
-            {/*  */}
-            {/* QUESTION PAGE */}
-  
+        {/*  */}
+        {/*  */}
+        <div className="title">
+          <hr />
+        </div>
+        {/*  */}
+        {/*  */}
+        {/* QUESTION PAGE */}
+
         {/* Featured question page start*/}
         <div className="container">
           <div className="container">
@@ -405,14 +405,14 @@ function Home() {
           </div>
         </div>
         {/* Featured question page ends*/}
-      {/*  */}
-      {/*  */}
-      <div className="title">
-        <hr />
-      </div>
-      {/*  */}
-      {/*  */}
-      {/* TECHNICAL TEAM */}
+        {/*  */}
+        {/*  */}
+        <div className="title">
+          <hr />
+        </div>
+        {/*  */}
+        {/*  */}
+        {/* TECHNICAL TEAM */}
         {/* Featured technical team start*/}
         <div className="container">
           <div className="container">
@@ -422,28 +422,28 @@ function Home() {
           </div>
         </div>
         {/* Featured technical team ends*/}
-            {/*  */}
-            {/*  */}
-            <div className="title">
-             <hr />
-            </div>
-          {/*  */}
-          {/*  */}
+        {/*  */}
+        {/*  */}
+        <div className="title">
+          <hr />
+        </div>
+        {/*  */}
+        {/*  */}
 
-         {/*FORM ACTION [MESSAGES][LOGIN][MAKE ORDER] */}
-         <div className="container">
+        {/*FORM ACTION [MESSAGES][LOGIN][MAKE ORDER] */}
+        <div className="container">
           <div className="title">
             MAKE ORDER / MAKE A COMMENTS OR TESTIMONY / LOGIN
           </div>
           <label htmlFor="info">To make Order and Testimony requires To first LogIn</label>
           <div className="comment">
-           <Comment/> 
+            <Comment />
           </div>
-         </div>
-          <div className="title">
-            <hr />
-          </div>
-       
+        </div>
+        <div className="title">
+          <hr />
+        </div>
+
       </div>
 
     </>

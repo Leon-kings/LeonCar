@@ -14,7 +14,7 @@ function Contact() {
          <h4 className="text-center">
           Create an account here 
           <Link to={'/Register'}> 
-          <button className="btn"> Register </button>
+          <button className="btn hover:bg-green-100"> Register </button>
           </Link>
           </h4>
          </div>
@@ -22,19 +22,12 @@ function Contact() {
          <h4 className="text-center">
           Already have an account log through here 
           <Link to={'/Login'}>
-          <button className="btn">  Login</button>
+          <button className="btn hover:bg-green-400">  Login</button>
           </Link>
           </h4>
          </div>
          <div className="container">
-          {/* <div className="left">
-            <div className="title">LOCATION</div>
-            <div className="location">
-              <div className="title"></div>
-              <div className="title"></div>
-              <div className="title"></div>
-            </div>
-          </div> */}
+
           {/*  */}
           <div className="xleft">
             <div className="title">MAIL US</div>

@@ -6,9 +6,7 @@ function Services() {
   return (
  <div className="container">
   <div className="head">
-    <h2 className="invisible">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui rerum vel deserunt, 
-    cum quia facere eos quaerat consequuntur, temporibus ea labore corrupti dolor atque nihil necessitatibus. 
-    Quod nostrum incidunt accusantium? </h2>
+<div className="title"></div>
 <h2 className="text-center"><b> Welcome to SerVices Page</b> </h2>
 </div>
    <div className="container">
@@ -16,7 +14,7 @@ function Services() {
   <div className="left">
     <div className="block">
       <div className="head">
-        <BsCart4/>
+        <BsCart4 className="icons"/>
       </div>
       <h3>Buy a Car</h3>
     </div>
@@ -25,7 +23,7 @@ function Services() {
   <div className="left">
     <div className="block">
       <div className="head">
-        <BsTools/>
+        <BsTools className="icons"/>
       </div>
       <h3>Maintenance ToolKits</h3>
     </div>
@@ -34,7 +32,7 @@ function Services() {
   <div className="left">
     <div className="block">
       <div className="head">
-        <BsPeople/>
+        <BsPeople className="icons"/>
       </div>
       <h3>Maintenance Team</h3>
     </div>
@@ -42,7 +40,7 @@ function Services() {
   <div className="left">
     <div className="block">
       <div className="head">
-        <BsClock/>
+        <BsClock className="icons"/>
       </div>
       <h3>Rent Car</h3>
     </div>
@@ -50,7 +48,7 @@ function Services() {
   <div className="left">
     <div className="block">
       <div className="head">
-        <BsWallet2/>
+        <BsWallet2 className="icons"/>
       </div>
       <h3>Maintenance Tyres</h3>
     </div>
@@ -58,12 +56,16 @@ function Services() {
   <div className="left">
     <div className="block">
       <div className="head">
-        <BsListCheck/>
+        <BsListCheck className="icons"/>
       </div>
       <h3>Make Your Order</h3>
     </div>
   </div>
+  
 </div>
+<div className="title">
+    <hr />
+  </div>
    </div>
 
   )
