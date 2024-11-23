@@ -9,24 +9,22 @@ import Contact from "./pages/contact/Contact"
 import NewFeatured from "./pages/newfeatured/NewFeatured"
 import NewFeaturedTool from "./pages/newfeatured/NewFeaturedTool"
 import Brands from "./pages/brands/Brands"
-import Login from "./pages/form/login/Login";
-import Register from "./pages/form/registration/Register"
-import CarSell from "./servicePages/rent/CarSell";
-import FieldTeam from "./admin/pages/view/request/FieldRequest";
+          import Login from "./pages/form/login/Login";
+          import Register from "./pages/form/registration/Register"
+          import CarSell from "./servicePages/rent/CarSell";
+          import FieldTeam from "./admin/pages/view/request/FieldRequest";
 import ToolKit from "./servicePages/tools/ToolKit";
 import FormCarRFental from "./servicePages/rental-form/FormCarRFental";
-import { RentCartProvider } from "./components/Rental/context/cart"
-import { CheepProvider } from "./components/Question/context/cart";
-import { CartProvider } from "./components/Cart/context/cart";
-import { ToolsCartContext } from "./servicePages/tools/context/cart";
-import Dashboard from "./admin/Dashboard"
-          // import Users from "./admin/pages/Users"
-          // import SellCars from "./admin/pages/SellCars"
+     import { RentCartProvider } from "./components/Rental/context/cart"
+     import { CheepProvider } from "./components/Question/context/cart";
+     import { CartProvider } from "./components/Cart/context/cart";
+     import { ToolsCartContext } from "./servicePages/tools/context/cart";
+     import Dashboard from "./admin/Dashboard"
           import Create from "./admin/pages/post/Create"
           import Createuser from "./admin/pages/users/Createuser"
           import Payment from "./servicePages/payment/Payment"
           import CreatePost from "./pages/createContent/CreatePost"
-                  import UserDashboard from "./admin/user/UserDashboard"
+import UserDashboard from "./admin/user/UserDashboard"
 import Myprofile from "./admin/pages/my profile/Myprofile";
    import Userview from "./admin/pages/view/users/Userview"
    import Productview from "./admin/pages/view/products/Productview"
