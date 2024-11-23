@@ -56,7 +56,7 @@ const UpdateProfile = () => {
       <div className="container ">
         <form onSubmit={handleSubmit} className="form">
           <div className="head">
-            <h2 className="title">Admin Profile</h2>
+            <h2 className="title text-blue-600 ">Admin Profile</h2>
           </div>
 
           <div className="container">

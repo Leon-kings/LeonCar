@@ -1,15 +1,15 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
-import Side from '../components/sidebar/Side'
+import Side from './components/sidebar/Side'
 const user = {
-  name: 'LD',
-  email: 'admin@gmail.com',
+  name: 'USERS',
+  email: 'users@gmail.com',
   imageUrl:
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Home', href: '/5Eqi3pEyTJliNa7ANd9GcQN', current: true },
+  { name: 'Home', href: '/833 103.803C182.209 103', current: true },
   { name: 'Messages', href: '/Message', current: false },
   { name: 'Requests', href: '/View/Request', current: false },
 
@@ -36,8 +36,8 @@ export default function Example() {
                 <div className="left shrink-0">
                   <img
                     alt="Your Company"
-                    src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ8w2AWEIyuoEwk1AYSyLeSq0HMgpayxIKs940qQIeiMKwJMZM7"
-                    className="right size-10 w-10 "
+                    src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q="
+                    className="size-30 w-30 "
                   />
                 </div>
                 <div className="hidden md:block">

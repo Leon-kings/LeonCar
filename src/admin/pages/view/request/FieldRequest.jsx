@@ -8,14 +8,24 @@ const FieldRequest = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [values,setValues] = useState({
     email:"",
-    request:""
+    reason:"",
+    productname:"",
+    contact:""
   });
   const Navigate =useNavigate();
   const inputs=[
   
- 
     {
-      id:1,
+        id:1,
+        name:"productname",
+        type:"text",
+        placeholder:"Product Name ex: VOLKWAGEN",
+        errorMessage:"Product name required",
+        label:"Product Name",
+        required:true
+      },
+    {
+      id:2,
       name:"email",
       type:"email",
       placeholder:"email",
@@ -24,12 +34,21 @@ const FieldRequest = () => {
       required:true
     },
     {
-        id:2,
-        name:"request",
+        id:3,
+        name:"reason",
         type:"text",
         placeholder:"Text",
         errorMessage:"Field needed",
         label:"Request",
+        required:true
+      },
+      {
+        id:3,
+        name:"contact",
+        type:"text",
+        placeholder:"Telphone",
+        errorMessage:"Field needed",
+        label:"Contact",
         required:true
       },
  
@@ -44,18 +63,14 @@ const FieldRequest = () => {
       
 
                         try {
-                            await axios.post('https://backendproject-8m9r.onrender.com/request', values);
+                            await axios.post('https://backendproject-8m9r.onrender.com/Booking', values);
                             alert('Request Received Successfully');
                             Navigate('/')
                         } catch (error) {
                             console.log(error);
                             alert(error);
-                        }
-      
+                        }     
       };
-
-
- 
   const onChange =(e) =>{
     setValues({...values,[e.target.name]:e.target.value});
   }
