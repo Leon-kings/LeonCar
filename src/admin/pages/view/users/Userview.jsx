@@ -172,34 +172,42 @@ const UsersTable = () => {
 
       <h1>Users</h1>
       {users.length > 0 ? (
-        <table className="table-auto w-full">
-          <thead>
-            <tr>
-              <th className="px-4 py-2">Name</th>
-              <th className="px-4 py-2">Email</th>
-              {/* Add more user property headers as needed */}
-              <th className="px-4 py-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user) => (
-              <tr key={user._id}>
-                <td className="px-4 py-2">{user.name}</td>
-                <td className="px-4 py-2">{user.email}</td>
-                {/* Add more user property data cells as needed */}
-                <td className="px-4 py-2">
-                  <button className="bg-red-500 hover:bg-red-700 text-white px-2 py-1 rounded" onClick={() => handleDelete(user._id)}>
-                    Delete
-                  </button>
-                  <button className="bg-green-500 hover:bg-green-700 text-white px-2 py-1 rounded ml-2" onClick={() => setSelectedUser(user)}>
-                    Update
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : (
+  <table className="table-auto w-full border border-collapse striped">
+    <thead className="bg-gray-100">
+      <tr>
+        <th className="px-4 py-2 font-bold">Name</th>
+        <th className="px-4 py-2 font-bold">Email</th>
+        <th className="px-4 py-2 font-bold">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {users.map((user) => (
+        <tr key={user._id}>
+          <td className="px-4 py-2">{user.name}</td>
+          <td className="px-4 py-2">{user.email}</td>
+          <td className="px-4 py-2">
+            <button
+              className="bg-red-500 1    
+ 1. 
+github.com
+github.com
+ hover:bg-red-700 text-white px-2 py-1 rounded mr-2"
+              onClick={() => handleDelete(user._id)}
+            >
+              <i className="far fa-trash-alt"></i> Delete
+            </button>
+            <button
+              className="bg-green-500 hover:bg-green-700 text-white px-2 py-1 rounded"
+              onClick={() => setSelectedUser(user)}
+            >
+              <i className="far fa-edit"></i> Update
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+) : (
         <p className='text-red-500'>No users found.</p>
       )}
 
