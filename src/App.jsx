@@ -32,6 +32,12 @@ import Myprofile from "./admin/pages/my profile/Myprofile";
 import Testimonny from "./admin/pages/view/users/comment/Testimonny";
 import ViewTestimonny from "./admin/pages/view/users/comment/ViewTestimony"
 import Booking from './admin/pages/view/booking/Booking'
+   import UserRequest from './admin/user/components/Request/userRequest'
+   import UserTestimony from './admin/user/components/testimony/UserTestimony'
+   import UserPost from './admin/user/components/post/UserPost'
+import ViewBooking from "./admin/user/components/Request/components/ViewBooking";
+import ViewPost from "./admin/user/components/post/components/ViewPost";
+import ViewTestimony from "./admin/user/components/testimony/components/ViewTestimony";
 const App = () => {
      return (
 
@@ -78,7 +84,15 @@ const App = () => {
                                         <Route element={<ViewTestimonny />} path='/View/Testimony'></Route>
                                         {/*  */}
                                         <Route element={<Booking />} path='/View/Booking'></Route>
+                                        <Route element={<UserRequest />} path='/833 103/Booking'></Route>
                                         {/*  */}
+                                        <Route element={<UserTestimony />} path='/833 103/Testimony'></Route>
+                                        <Route element={<UserPost />} path='/833 103/Post'></Route>
+                                        {/* user Views */}
+                                        <Route element={<ViewBooking />} path='/833 103/301 338/Booking'></Route>
+                                        <Route element={<ViewPost />} path='/833 103/301 338/Post'></Route>
+                                        {/*  */}
+                                        <Route element={<ViewTestimony />} path='/833 103/301 338/Testimony'></Route>
                                    </Routes>
                                    <Footer />
                               </BrowserRouter>

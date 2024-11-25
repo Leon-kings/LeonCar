@@ -55,7 +55,7 @@ const Testimonny = () => {
     try {
       await axios.post('https://backendproject-8m9r.onrender.com/testimony', values);
       alert('Testimony Received Successfully');
-      Navigate('/')
+      Navigate('/5Eqi3pEyTJliNa7ANd9GcQN')
     } catch (error) {
       console.log(error);
       alert(error);

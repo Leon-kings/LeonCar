@@ -37,17 +37,17 @@ const FieldRequest = () => {
         id:3,
         name:"reason",
         type:"text",
-        placeholder:"Text",
-        errorMessage:"Field needed",
-        label:"Request",
+        placeholder:"Details ex: I need it ASAP/I like it",
+        errorMessage:"Details Field needed",
+        label:"Reason/details",
         required:true
       },
       {
-        id:3,
+        id:4,
         name:"contact",
         type:"text",
-        placeholder:"Telphone",
-        errorMessage:"Field needed",
+        placeholder:"+250787944577",
+        errorMessage:"Contact Field needed",
         label:"Contact",
         required:true
       },
@@ -65,12 +65,12 @@ const FieldRequest = () => {
                         try {
                             await axios.post('https://backendproject-8m9r.onrender.com/Booking', values);
                             alert('Request Received Successfully');
-                            Navigate('/')
+                            Navigate('/5Eqi3pEyTJliNa7ANd9GcQN')
                         } catch (error) {
                             console.log(error);
                             alert(error);
                         }     
-      };
+                };
   const onChange =(e) =>{
     setValues({...values,[e.target.name]:e.target.value});
   }
@@ -199,16 +199,11 @@ const FieldRequest = () => {
       <div className="flex-grow bg-gray-100 min-h-screen ">
         {/* side1 */}
         <div className="left">
-          <div className="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-             Aliquam, possimus nobis. Quasi accusamus fugiat praesentium magnam provident 
-             architecto magni ipsa ratione. Quas, accusantium. Illum illo blanditiis neque
-              quod, culpa hic!</div>
               <div className="title"></div>
         </div>
         {/* side2 */}
-
-<div className="left">
-    <form onSubmit={handleSubmit} className="form">
+    <div className="left">
+      <form onSubmit={handleSubmit} className="form">
         <h2 className="title text-black">Makes Requests</h2>
         <div className="container">
         {inputs.map((input)=>(
@@ -218,12 +213,8 @@ const FieldRequest = () => {
         ))}
         <div className="head">
         <button className="button">Submit</button>
-       
         </div>
         </div>
-      
-
-
       </form>
       </div>
 

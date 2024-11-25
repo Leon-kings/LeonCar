@@ -10,7 +10,7 @@ const Testimonials = () => {
     useEffect(() => {
         const fetchTestimonials = async () => {
             try {
-                const response = await axios.get('https://backendproject-8m9r.onrender.com/booking');
+                const response = await axios.get('https://backendproject-8m9r.onrender.com/Booking');
                 setTestimonials(response.data);
             } catch (error) {
                 console.error('Error fetching booking:', error);
@@ -23,7 +23,7 @@ const Testimonials = () => {
     // Delete a testimonial
     const deleteTestimonial = async (id) => {
         try {
-            await axios.delete(`https://backendproject-8m9r.onrender.com/booking/${id}`);
+            await axios.delete(`https://backendproject-8m9r.onrender.com/Booking/${id}`);
             setTestimonials(testimonials.filter((t) => t.id !== id));
         } catch (error) {
             console.error('Error deleting booking:', error);
@@ -43,7 +43,7 @@ const Testimonials = () => {
                 ...editingTestimonial,
                 text: updatedText,
             };
-            await axios.put(`https://backendproject-8m9r.onrender.com/booking/${editingTestimonial.id}`, updatedTestimonial);
+            await axios.put(`https://backendproject-8m9r.onrender.com/Booking/${editingTestimonial.id}`, updatedTestimonial);
             setTestimonials(
                 testimonials.map((t) =>
                     t.id === editingTestimonial.id ? updatedTestimonial : t

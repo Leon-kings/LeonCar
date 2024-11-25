@@ -10,8 +10,8 @@ const user = {
 }
 const navigation = [
   { name: 'Home', href: '/5Eqi3pEyTJliNa7ANd9GcQN', current: true },
-  { name: 'Messages', href: '/Message', current: false },
-  { name: 'Requests', href: '/View/Request', current: false },
+  { name: 'Messages', href: '/Testimony', current: false },
+  { name: 'Requests', href: '/Request', current: false },
 
 ]
 const userNavigation = [
@@ -37,7 +37,7 @@ export default function Example() {
                   <img
                     alt="Your Company"
                     src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ8w2AWEIyuoEwk1AYSyLeSq0HMgpayxIKs940qQIeiMKwJMZM7"
-                    className="right size-10 w-10 "
+                    className="size-30 w-30 "
                   />
                 </div>
                 <div className="hidden md:block">
@@ -152,9 +152,6 @@ export default function Example() {
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             {/* Your content */} 
             <Side/>
-           
-            
-            
             </div>
         </main>
       </div>
