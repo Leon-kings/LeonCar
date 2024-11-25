@@ -11,7 +11,8 @@ const UsersTable = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get('https://backendproject-8m9r.onrender.com/users');
-        setUsers(response.data);
+        setUsers(response.data.data);
+        console.log('users are:',response.data.data)
       } catch (error) {
         console.error('Error fetching users:', error);
       }
