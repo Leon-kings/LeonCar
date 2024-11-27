@@ -45,10 +45,9 @@ const handleSubmit = async (e) => {
 
   if (values.email === 'admin@gmail.com' && values.password === 'admin') {
     if (window.confirm("Do you really want to continue to dashboard?")) {
-      window.open("/5Eqi3pEyTJliNa7ANd9GcQN", "Thanks for Visiting!");
       Navigate("/5Eqi3pEyTJliNa7ANd9GcQN");
     }else{
-      window.open("/", "Thanks for Trying!");
+
       Navigate("/");
     }
     return;
@@ -57,9 +56,11 @@ const handleSubmit = async (e) => {
   try {
     await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
     if (window.confirm("Do you really want to move?")) {
-      window.open("/833 103.803C182.209 103", "Thanks for Visiting!");
+   
+      Navigate("/833 103.803C182.209 103");
     }else{
-      window.open("/", "Thanks for Trying!");
+  
+      Navigate("/");
     }
   } catch (err) {
     console.log(err);

@@ -60,10 +60,10 @@ const App = () => {
     try {
       await axios.post('https://backendproject-8m9r.onrender.com/users', values);
       if (window.confirm("Do you really want to continue to login?")) {
-        window.open("/login", "Thanks for Visiting!");
+       
         Navigate("/login");
       }else{
-        window.open("/", "Thanks for Trying!");
+    
         Navigate("/");
       }
     } catch (err) {
