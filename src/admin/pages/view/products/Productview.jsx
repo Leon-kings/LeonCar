@@ -5,45 +5,76 @@ import Example from '../request/component/ExampleSide';
 
 const PostsTable = () => {
   const [posts, setPosts] = useState([]);
-  const [selectedPost, setSelectedPost] = useState(null);
+  const [editingPost, setEditingPost] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  // Error handling for API requests
-  const handleError = (error) => {
-    console.error('Error:', error);
-    // You can also display user-friendly error messages here
-  };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    price: "",
+    category: "",
+    capacity: "",
+    type: "",
+    url: "",
+  });
 
+  // Fetch posts from API
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('https://backendproject-8m9r.onrender.com/posts');
-        setPosts(response.data);
+        const response = await axios.get("https://backendproject-8m9r.onrender.com/posts"); // Replace with your API URL
+        setPosts(response.data.data);
       } catch (error) {
-        handleError(error);
+        console.error("Error fetching posts:", error);
+        alert("Error fetching posts:", error)
       }
     };
 
     fetchPosts();
   }, []);
 
+  // Delete post
   const handleDelete = async (postId) => {
     try {
       await axios.delete(`https://backendproject-8m9r.onrender.com/posts/${postId}`);
-      setPosts(posts.filter((post) => post._id !== postId)); // Update local state
+      setPosts(posts.filter((post) => post._id !== postId));
     } catch (error) {
-      handleError(error);
+      console.error("Error deleting post:", error);
     }
   };
 
-  const handleUpdate = async (updatedPost) => {
+  // Handle edit
+  const handleEdit = (post) => {
+    setEditingPost(post.id);
+    setFormData({
+      name: post.name,
+      email: post.email,
+      price: post.price,
+      category: post.category,
+      capacity: post.capacity,
+      type: post.type,
+      url: post.url,
+    });
+  };
+
+  // Update post
+  const handleUpdate = async (postId) => {
     try {
-      const response = await axios.put(`https://backendproject-8m9r.onrender.com/posts/${updatedPost._id}`, updatedPost);
-      const updatedPosts = posts.map((post) => (post._id === updatedPost._id ? response.data : post));
-      setPosts(updatedPosts);
-      setSelectedPost(null); // Clear selected post after update
+      await axios.put(`https://backendproject-8m9r.onrender.com/posts/${postId}`, formData);
+      setPosts(
+        posts.map((post) =>
+          post._id === postId ? { ...post, ...formData } : post
+        )
+      );
+      setEditingPost(null);
     } catch (error) {
-      handleError(error);
+      console.error("Error updating post:", error);
     }
+  };
+
+  // Handle form input change
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -172,57 +203,140 @@ const PostsTable = () => {
       {/* Main Content */}
       <div className="flex-grow bg-gray-100 min-h-screen ">
       <h1>Posts</h1>
-      {posts.length > 0 ? (
-        <table className="table ">
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-white border border-gray-200">
           <thead>
-            <tr>
-              <th className="px-4 py-2">Title</th>
-              <th className="px-4 py-2">Content</th>
-              {/* Add more post property headers as needed */}
-              <th className="px-4 py-2">Actions</th>
+            <tr className="bg-gray-100">
+              <th className="text-left py-2 px-4 border">ID</th>
+              <th className="text-left py-2 px-4 border">Name</th>
+              <th className="text-left py-2 px-4 border">Email</th>
+              <th className="text-left py-2 px-4 border">Price</th>
+              <th className="text-left py-2 px-4 border">Category</th>
+              <th className="text-left py-2 px-4 border">Capacity</th>
+              <th className="text-left py-2 px-4 border">Type</th>
+              <th className="text-left py-2 px-4 border">URL</th>
+              <th className="text-center py-2 px-4 border">Actions</th>
             </tr>
           </thead>
           <tbody>
             {posts.map((post) => (
-              <tr key={post._id}>
-                <td className="px-4 py-2">{post.title}</td>
-                <td className="px-4 py-2">{post.content.substring(0, 50)}...</td> {/* Truncate content for table display */}
-                {/* Add more post property data cells as needed */}
-                <td className="px-4 py-2">
-                  <button className="bg-red-500 hover:bg-red-700 text-white px-2 py-1 rounded" onClick={() => handleDelete(post._id)}>
-                    Delete
-                  </button>
-                  <button className="bg-green-500 hover:bg-green-700 text-white px-2 py-1 rounded ml-2" onClick={() => setSelectedPost(post)}>
-                    Update
-                  </button>
-                </td>
+              <tr key={post._id} className="border-t">
+                {editingPost === post._id ? (
+                  <>
+                    <td className="py-2 px-4 border">
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        className="w-full border p-1"
+                      />
+                    </td>
+                    <td className="py-2 px-4 border">
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className="w-full border p-1"
+                      />
+                    </td>
+                    <td className="py-2 px-4 border">
+                      <input
+                        type="number"
+                        name="price"
+                        value={formData.price}
+                        onChange={handleInputChange}
+                        className="w-full border p-1"
+                      />
+                    </td>
+                    <td className="py-2 px-4 border">
+                      <input
+                        type="text"
+                        name="category"
+                        value={formData.category}
+                        onChange={handleInputChange}
+                        className="w-full border p-1"
+                      />
+                    </td>
+                    <td className="py-2 px-4 border">
+                      <input
+                        type="number"
+                        name="capacity"
+                        value={formData.capacity}
+                        onChange={handleInputChange}
+                        className="w-full border p-1"
+                      />
+                    </td>
+                    <td className="py-2 px-4 border">
+                      <input
+                        type="text"
+                        name="type"
+                        value={formData.type}
+                        onChange={handleInputChange}
+                        className="w-full border p-1"
+                      />
+                    </td>
+                    <td className="py-2 px-4 border">
+                      <input
+                        type="url"
+                        name="url"
+                        value={formData.url}
+                        onChange={handleInputChange}
+                        className="w-full border p-1"
+                      />
+                    </td>
+                    <td className="py-2 px-4 border text-center">
+                      <button
+                        className="bg-green-500 text-white px-2 py-1 rounded mr-2"
+                        onClick={() => handleUpdate(post._id)}
+                      >
+                        Save
+                      </button>
+                      <button
+                        className="bg-gray-500 text-white px-2 py-1 rounded"
+                        onClick={() => setEditingPost(null)}
+                      >
+                        Cancel
+                      </button>
+                    </td>
+                  </>
+                ) : (
+                  <>
+                    <td className="py-2 px-4 border">{post._id}</td>
+                    <td className="py-2 px-4 border">{post.name}</td>
+                    <td className="py-2 px-4 border">{post.email}</td>
+                    <td className="py-2 px-4 border">${post.price}</td>
+                    <td className="py-2 px-4 border">{post.category}</td>
+                    <td className="py-2 px-4 border">{post.capacity}</td>
+                    <td className="py-2 px-4 border">{post.type}</td>
+                    <td className="py-2 px-4 border">
+                      <a href={post.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+                        View
+                      </a>
+                    </td>
+                    <td className="py-2 px-4 border text-center">
+                      <button
+                        className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
+                        onClick={() => handleEdit(post)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="bg-red-500 text-white px-2 py-1 rounded"
+                        onClick={() => handleDelete(post._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </>
+                )}
               </tr>
             ))}
           </tbody>
         </table>
-      ) : (
-        <p>No posts found.</p>
-      )}
+      </div>
 
-      {selectedPost && (
-        <div className="mt-4">
-          <h2>Update Post</h2>
-          {/* Form for updating post details goes here */}
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            // Extract updated post data from form fields
-            const updatedPost = {
-              // ... updated post data
-            };
-            handleUpdate(updatedPost);
-          }}>
-            {/* Update form fields for title, content, etc. */}
-            <button type="submit" className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded">
-              Update
-            </button>
-          </form>
-        </div>
-      )}
       <div className="container">
         <Example/>
       </div>

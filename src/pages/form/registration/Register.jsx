@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import FormInput from "../../../components/action/FormInput"
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import axios from "axios";
 // useNavigate
 const App = () => {
@@ -13,7 +13,6 @@ const App = () => {
     phone: ""
 
   });
-  const Navigate = useNavigate()
   const inputs = [
     {
       id: 1,
@@ -60,9 +59,11 @@ const App = () => {
     console.log(values);
     try {
       await axios.post('https://backendproject-8m9r.onrender.com/users', values);
-      alert('User Registered successfully');
-     
-      Navigate('/login');
+      if (window.confirm("Do you really want to continue to login?")) {
+        window.open("/login", "Thanks for Visiting!");
+      }else{
+        window.open("/", "Thanks for Trying!");
+      }
     } catch (err) {
       console.log(err);
     }

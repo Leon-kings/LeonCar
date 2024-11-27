@@ -1,6 +1,5 @@
 import  { useState } from "react";
 import FormInput from "../../../components/action/FormInput"
-import {useNavigate} from "react-router-dom"
 import { Link } from "react-router-dom";
 import axios from "axios";
 const Login =()=>{
@@ -11,7 +10,7 @@ const Login =()=>{
     password:"",
   
   });
-  const Navigate =useNavigate();
+
   const inputs=[
   
  
@@ -45,15 +44,21 @@ const handleSubmit = async (e) => {
   console.log(values);
 
   if (values.email === 'admin@gmail.com' && values.password === 'admin') {
-    alert('Welcome LD');
-    Navigate('/5Eqi3pEyTJliNa7ANd9GcQN');
+    if (window.confirm("Do you really want to continue to dashboard?")) {
+      window.open("/5Eqi3pEyTJliNa7ANd9GcQN", "Thanks for Visiting!");
+    }else{
+      window.open("/", "Thanks for Trying!");
+    }
     return;
   }
 
   try {
     await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
-    alert('User logged in successfully');
-    Navigate('/833 103.803C182.209 103');
+    if (window.confirm("Do you really want to move?")) {
+      window.open("/833 103.803C182.209 103", "Thanks for Visiting!");
+    }else{
+      window.open("/", "Thanks for Trying!");
+    }
   } catch (err) {
     console.log(err);
 

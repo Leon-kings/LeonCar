@@ -46,7 +46,7 @@ const Sidebar = () => {
             <br />
             <li>
               <Link
-                to="/833 103/Post"
+                to="/833 103/301 338/Post"
                 className="block px-4 py-2 text-black hover:bg-gray-700 rounded"
               >
                 <button>Products</button>
