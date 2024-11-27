@@ -10,11 +10,11 @@ const Sidebar = () => {
     <div className="flex">
       {/* Sidebar */}
       <div
-        className={`top-0 left-0 h-full bg-gray-800 text-white w-64 z-50 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`h-full bg-gray-800 text-white w-64 z-50 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 lg:translate-x-0`}
       >
         <div className="p-4 text-lg font-bold">LD</div>
-        <nav className="mt-4">
+        <nav className=" flex-auto mt-4 left-0 ">
           <ul>
             <li>
               <Link
@@ -128,10 +128,10 @@ const Sidebar = () => {
       </button>
 
       {/* Main Content */}
-      <div className="flex-grow bg-gray-100 min-h-screen ">
-
-        <ShortList />
-        <Example />
+      <div className="main">
+        <div className="left"> <ShortList /></div>
+       <div className="left"><Example /></div>
+        
       </div>
     </div>
   );

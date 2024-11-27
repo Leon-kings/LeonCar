@@ -8,7 +8,7 @@ function Posts() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("https://backendproject-8m9r.onrender.com/posts"); // Replace with your API endpoint
+        const response = await axios.get('https://backendproject-8m9r.onrender.com/posts'); // Replace with your API endpoint
         console.log("API Response:", response.data.data); // Debug API response
 
         // Ensure the response is an array
