@@ -1,6 +1,6 @@
 import  { useState } from "react";
 import FormInput from "../../../components/action/FormInput"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 const Login =()=>{
   
@@ -35,7 +35,7 @@ const Login =()=>{
       required:true
     },
   ];
-
+const Navigate=useNavigate();
 // fetching data from database
          // handleSubmit
 
@@ -46,8 +46,10 @@ const handleSubmit = async (e) => {
   if (values.email === 'admin@gmail.com' && values.password === 'admin') {
     if (window.confirm("Do you really want to continue to dashboard?")) {
       window.open("/5Eqi3pEyTJliNa7ANd9GcQN", "Thanks for Visiting!");
+      Navigate("/5Eqi3pEyTJliNa7ANd9GcQN");
     }else{
       window.open("/", "Thanks for Trying!");
+      Navigate("/");
     }
     return;
   }

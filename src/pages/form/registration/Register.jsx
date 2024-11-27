@@ -1,9 +1,9 @@
 
 import { useState } from "react";
 import FormInput from "../../../components/action/FormInput"
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
-// useNavigate
+
 const App = () => {
   const [values, setValues] = useState({
 
@@ -61,14 +61,16 @@ const App = () => {
       await axios.post('https://backendproject-8m9r.onrender.com/users', values);
       if (window.confirm("Do you really want to continue to login?")) {
         window.open("/login", "Thanks for Visiting!");
+        Navigate("/login");
       }else{
         window.open("/", "Thanks for Trying!");
+        Navigate("/");
       }
     } catch (err) {
       console.log(err);
     }
   };
-
+  const Navigate=useNavigate()
   const onChange = (e) => {
 
     setValues({ ...values, [e.target.name]: e.target.value });
